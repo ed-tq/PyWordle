@@ -1,0 +1,54 @@
+#  📌 Step 3: Define `get_started` function
+
+
+1.   This function stores name of the word file in a variable.
+2.   Asks for user name.
+3.   Prints:
+
+```
+Welcome to Wordle 101 [userName]
+
+========================================================================
+                                 Rules
+You have 6 guesses to figure out the solution.
+All solutions are words that are 5 letters long.
+Letters that have been guessed correctly are displayed in uppercase.
+Letters that are in the word but have been guessed in the wrong location
+are displayed in lowercase.
+========================================================================
+```
+4.  Returns file name.  
+
+<div style="background:#f0f8ff; padding:15px; border-left:5px solid #2c7be5; margin:20px 0;">
+<details>
+<summary>💡 Hint</summary>
+
+- Use variables to store input from prompts `input()`.  
+- Copy and paste if needed.  
+- You can use `\n` in long sentences to continue a sentence on a new line.  
+- `[userName]` should be the name entered by the user.  
+<details>
+<summary>ℹ️ More</summary>  
+  -  You can use f-string formatting to print a variable in a string. This works for any variable type (e.g. `str`, `int`).
+<details>
+<summary>📍 Example</summary>  
+`print(f"Hello {variable_name}!")`
+</details> </details></details>
+</div>
+
+
+<div style="background:#fffaf0; padding:15px; border-left:5px solid #FB8C00; margin:20px 0;">
+<details>
+<summary>📝 Test Code</summary>
+```python 
+import urllib.request
+url = "https://raw.githubusercontent.com/ed-tq/Python-Word-Guessing-Console-Game/refs/heads/main/03-test.py"
+with urllib.request.urlopen(url) as response:
+    code = response.read().decode("utf-8")
+exec(code)
+```
+</details>
+</div>
+
+
+

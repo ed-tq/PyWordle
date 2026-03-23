@@ -1,0 +1,61 @@
+#  📖 Glossary
+
+Quick links for revision for concepts that you will need to know before starting this project:  
+
+####  A 
+-  [Arrays 🔗](https://www.w3schools.com/python/python_arrays.asp)  
+    -  [Lists 🔗](https://www.w3schools.com/python/python_lists.asp)  
+        -  [Methods 🔗](https://www.w3schools.com/python/python_ref_list.asp)
+    -  [Tuples 🔗](https://www.w3schools.com/python/python_lists.asp)  
+    
+---  
+
+####  C
+-  Conditions  
+    -  [If Statements 🔗](https://www.w3schools.com/python/python_conditions.asp)   
+    
+---
+    
+####  D
+-  [Dictionaries 🔗](https://www.w3schools.com/python/python_dictionaries.asp)  
+    -  [Methods 🔗](https://www.w3schools.com/python/python_ref_dictionary.asp)  
+    
+---
+    
+####  F 
+-  [File Handling 🔗](https://www.w3schools.com/python/python_file_handling.asp)
+    -  [Read 🔗](https://www.w3schools.com/python/python_file_open.asp)  
+    -  [Methods 🔗](https://www.w3schools.com/python/python_ref_file.asp)  
+    
+-  [Functions 🔗](https://www.w3schools.com/python/python_functions.asp)    
+    -  [Range 🔗](https://www.w3schools.com/python/python_range.asp)  
+
+---
+
+#### I
+-  [Input/Prompts 🔗](https://www.w3schools.com/python/python_user_input.asp)  
+
+---
+
+####  L
+-  Loops   
+    -  [For 🔗](https://www.w3schools.com/python/python_for_loops.asp)    
+    -  [While 🔗](https://www.w3schools.com/python/python_while_loops.asp)   
+    
+---
+
+####  O
+
+-  Operators  
+    -  [Assignment 🔗](https://www.w3schools.com/python/python_operators_assign.asp)
+    -  [Comparison 🔗](https://www.w3schools.com/python/python_operators_comparison.asp) 
+    -  [Logical 🔗](https://www.w3schools.com/python/python_operators_logical.asp)
+    -  [Membership 🔗](https://www.w3schools.com/python/python_operators_membership.asp)  
+
+---
+
+####  S
+-  Strings  
+    -  [Formatting 🔗](https://www.w3schools.com/python/python_string_formatting.asp)
+    -  [Methods 🔗](https://www.w3schools.com/python/python_ref_string.asp)
+

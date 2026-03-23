@@ -1,0 +1,12 @@
+book_filename: "word-guess-guide"
+output_dir: "docs"
+rmd_files:
+  - index.Rmd
+  - 00.Rmd
+  - 01.Rmd
+  - 02.Rmd
+  - 03.Rmd
+  - 04.Rmd
+  - 05.Rmd
+  - 06.Rmd
+  - 07.Rmd

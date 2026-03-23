@@ -1,0 +1,37 @@
+#  📌 Step 1: Download your files️
+
+-  This will download a .zip file, named `yourName_WordGuessProject.zip` with a folder of all the files you need for this project.
+-  It is recommended you save the zip file in the "Documents" directory. 
+-  Right-click on .zip file to extract files.
+-  In the folder you are given a `script.py` file to write your code.
+- Open this .py file in your desired python code editor.
+-  The `words.txt` file contains 5-letter words, with each word on a separate line. Only the words in this file are valid guesses for the user.
+-  It is important you do not move files out of this folder for your project to run.
+
+<div style="max-width:500px; margin:auto; text-align:center; font-family:Arial;">
+
+  <input id="zipname" placeholder="Type in your name"
+         style="padding:6px; width:200px; font-size:14px;">
+
+  <a id="downloadLink" href="projectFiles.zip" download="projectFiles.zip">
+    <button style="padding:8px 14px; font-size:14px; background:#2c7be5; color:white; border:none; border-radius:6px; cursor:pointer;">
+      Download ZIP 🗃️️
+    </button>
+  </a>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById("zipname");
+  const link = document.getElementById("downloadLink");
+
+  input.addEventListener("input", function () {
+    let name = input.value.trim();
+    let fname = name ? name + "_WordGuessProject" : "projectFiles";
+    fname = fname.replace(/[<>:"/\\\\|?*]+/g, "");
+    if (!fname.toLowerCase().endsWith(".zip")) fname += ".zip";
+    link.download = fname;
+  });
+});
+</script>
