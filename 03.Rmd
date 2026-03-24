@@ -5,7 +5,7 @@
 2.   Asks for user name.
 3.   Prints:
 
-```
+```python
 Welcome to Wordle 101 [userName]
 
 ========================================================================
@@ -28,7 +28,7 @@ are displayed in lowercase.
 - You can use `\n` in long sentences to continue a sentence on a new line.  
 - `[userName]` should be the name entered by the user.  
 <details>
-<summary>ℹ️ More</summary>  
+<summary>ℹ️ More Information</summary>  
   -  You can use f-string formatting to print a variable in a string. This works for any variable type (e.g. `str`, `int`).
 <details>
 <summary>📍 Example</summary>  

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>📌 Step : Define | Word Guess Project Instructions</title>
-  <meta name="description" content="📌 Step : Define | Word Guess Project Instructions" />
+  <title>📌 Step 6: Define get_player_guess function | Word Guess Project Instructions</title>
+  <meta name="description" content="📌 Step 6: Define get_player_guess function | Word Guess Project Instructions" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="📌 Step : Define | Word Guess Project Instructions" />
+  <meta property="og:title" content="📌 Step 6: Define get_player_guess function | Word Guess Project Instructions" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="📌 Step : Define | Word Guess Project Instructions" />
+  <meta name="twitter:title" content="📌 Step 6: Define get_player_guess function | Word Guess Project Instructions" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="step-6-define-get_player_guess-function.html"/>
-<link rel="next" href="quiz.html"/>
+<link rel="prev" href="step-5-define-get_random_word-function.html"/>
+<link rel="next" href="step-define.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -162,13 +162,104 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="step-define" class="section level1 hasAnchor">
-<h1>📌 Step : Define<a href="#step-define" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="step-6-define-get_player_guess-function" class="section level1 hasAnchor">
+<h1>📌 Step 6: Define <code>get_player_guess</code> function<a href="#step-6-define-get_player_guess-function" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<ol style="list-style-type: decimal">
+<li>This function opens the file words.txt and reads all the words into a list called valid_words, where each word is stripped of whitespace and converted to lowercase.<br />
+</li>
+<li>The function then repeatedly prompts the user to enter a guess using a while True loop. The user input should also be converted to lowercase.<br />
+
+<details>
+<summary>
+ℹ️
+</summary>
+<ul>
+<li>The words from the file and the user’s input are converted to lowercase to ensure consistency when comparing values during validation.</li>
+<li>This prevents mismatches (e.g., “HEllo” vs “hello”), allowing valid words to be recognised regardless of how the user types them.</li>
+</ul>
+</details></li>
+<li>The guess is validated using the following conditions:
+<ul>
+<li>The guess must be exactly 5 letters long</li>
+<li>The guess must contain only alphabetic characters</li>
+<li>The guess must exist in the list of valid words<br />
+</li>
+</ul></li>
+<li>If the guess does not meet any of the conditions, print an appropriate error message and the user is prompted again.<br />
+</li>
+<li>Once a valid guess is entered, the function returns the guess in lowercase.</li>
+</ol>
 <div style="background:#f0f8ff; padding:15px; border-left:5px solid #2c7be5; margin:20px 0;">
 <details>
 <summary>
 💡 Hint
 </summary>
+<ul>
+<li>You need to read words from a file called <code>words.txt</code>. Think about how to open a file safely in Python.<br />
+Note: when you open a file you need to make sure to close it.</li>
+</ul>
+<div style="margin-left:20px;">
+<details>
+<summary>
+ℹ️
+</summary>
+<ul>
+<li>You can use a <code>with open(...)</code> statement so the file is automatically closed after reading.</li>
+</ul>
+</details>
+</div>
+<ul>
+<li>Once the file is open, you can loop through each line in the file to access the words.</li>
+</ul>
+<div style="margin-left:20px;">
+<details>
+<summary>
+ℹ️
+</summary>
+<ul>
+<li>Words may include extra whitespace or newline characters. Use <code>strip()</code> to clean each word<br />
+</li>
+<li>Convert each word to lowercase using <code>.lower()</code><br />
+</li>
+<li>Store the cleaned words in a list using a list comprehension</li>
+</ul>
+<div style="margin-left:20px;">
+<details>
+<summary>
+ℹ️
+</summary>
+<ul>
+<li>You can chain methods/operations as long as each method/operation works on the object type returned by the previous one:
+<ul>
+<li><code>"hello world".split()[0].upper()</code>:
+<code>.split()</code> works on str, <code>"hello world"</code>, returns a list <code>["hello", "world"]</code> → <code>[0]</code> works on list, returns a str, <code>"hello"</code> → <code>.upper()</code> works on str, returns str</li>
+</ul></li>
+<li>Basic list comprehension format:<br />
+<code>new_list = [expression for item in iterable]</code></li>
+</ul>
+<div style="margin-left:20px;">
+<details>
+<summary>
+📍
+</summary>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="step-6-define-get_player_guess-function.html#cb6-1" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;cherry&quot;</span>, <span class="st">&quot;kiwi&quot;</span>, <span class="st">&quot;mango&quot;</span>]</span>
+<span id="cb6-2"><a href="step-6-define-get_player_guess-function.html#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="step-6-define-get_player_guess-function.html#cb6-3" tabindex="-1"></a>upper_fruits <span class="op">=</span> []</span>
+<span id="cb6-4"><a href="step-6-define-get_player_guess-function.html#cb6-4" tabindex="-1"></a><span class="cf">for</span> f <span class="kw">in</span> fruits:</span>
+<span id="cb6-5"><a href="step-6-define-get_player_guess-function.html#cb6-5" tabindex="-1"></a>    upper_fruits.append(f.upper())</span></code></pre></div>
+<p>is the same as:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="step-6-define-get_player_guess-function.html#cb7-1" tabindex="-1"></a>upper_fruits <span class="op">=</span> [f.upper() <span class="cf">for</span> f <span class="kw">in</span> fruits]</span></code></pre></div>
+</details>
+</div>
+</details>
+</div>
+</details>
+</div>
+<ul>
+<li>To check if the number of letters is not 5 → <code>len(...) != 5</code></li>
+<li>To check if the guess is not alphabetic → <code>.isalpha()</code></li>
+<li>To check if the guess is not a valid word → <code>not in</code></li>
+</ul>
 </details>
 </div>
 <div style="background:#fffaf0; padding:15px; border-left:5px solid #FB8C00; margin:20px 0;">
@@ -176,7 +267,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 📝 Test Code
 </summary>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="step-define.html#cb9-1" tabindex="-1"></a></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="step-6-define-get_player_guess-function.html#cb8-1" tabindex="-1"></a><span class="im">import</span> urllib.request</span>
+<span id="cb8-2"><a href="step-6-define-get_player_guess-function.html#cb8-2" tabindex="-1"></a>url <span class="op">=</span> <span class="st">&quot;https://raw.githubusercontent.com/ed-tq/Python-Word-Guessing-Console-Game/refs/heads/main/06-test.py&quot;</span></span>
+<span id="cb8-3"><a href="step-6-define-get_player_guess-function.html#cb8-3" tabindex="-1"></a><span class="cf">with</span> urllib.request.urlopen(url) <span class="im">as</span> response:</span>
+<span id="cb8-4"><a href="step-6-define-get_player_guess-function.html#cb8-4" tabindex="-1"></a>    code <span class="op">=</span> response.read().decode(<span class="st">&quot;utf-8&quot;</span>)</span>
+<span id="cb8-5"><a href="step-6-define-get_player_guess-function.html#cb8-5" tabindex="-1"></a><span class="bu">exec</span>(code)</span></code></pre></div>
 </details>
 </div>
 
@@ -186,8 +281,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="step-6-define-get_player_guess-function.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="quiz.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="step-5-define-get_random_word-function.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="step-define.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -1,11 +1,76 @@
-#  📌 Step : Define 
+#  📌 Step 6: Define `get_player_guess` function  
+
+1.  This function opens the file words.txt and reads all the words into a list called valid_words, where each word is stripped of whitespace and converted to lowercase.  
+2. The function then repeatedly prompts the user to enter a guess using a while True loop. The user input should also be converted to lowercase.    
+<details>
+    <summary>ℹ️</summary>  
+    - The words from the file and the user’s input are converted to lowercase to ensure consistency when comparing values during validation. 
+    - This prevents mismatches (e.g., "HEllo" vs "hello"), allowing valid words to be recognised regardless of how the user types them.
+</details>  
+3.  The guess is validated using the following conditions:  
+    -  The guess must be exactly 5 letters long
+    - The guess must contain only alphabetic characters
+    - The guess must exist in the list of valid words  
+4.  If the guess does not meet any of the conditions, print an appropriate error message and the user is prompted again.  
+5.  Once a valid guess is entered, the function returns the guess in lowercase.  
 
 
 <div style="background:#f0f8ff; padding:15px; border-left:5px solid #2c7be5; margin:20px 0;">
 <details>
 <summary>💡 Hint</summary>
 
+- You need to read words from a file called `words.txt`. Think about how to open a file safely in Python.  
+  Note: when you open a file you need to make sure to close it.  
 
+<div style="margin-left:20px;">
+<details>
+<summary>ℹ️</summary>
+
+- You can use a `with open(...)` statement so the file is automatically closed after reading.
+
+</details>
+</div>
+
+- Once the file is open, you can loop through each line in the file to access the words.
+
+<div style="margin-left:20px;">
+<details>
+<summary>ℹ️</summary>
+
+- Words may include extra whitespace or newline characters. Use `strip()` to clean each word  
+- Convert each word to lowercase using `.lower()`  
+- Store the cleaned words in a list using a list comprehension  
+
+<div style="margin-left:20px;">
+<details>
+<summary>ℹ️</summary>
+
+- You can chain methods/operations as long as each method/operation works on the object type returned by the previous one:
+  - `"hello world".split()[0].upper()`:
+  `.split()` works on str, `"hello world"`, returns a list `["hello", "world"]` → `[0]` works on list, returns a str, `"hello"` → `.upper()` works on str, returns str
+- Basic list comprehension format:  
+  `new_list = [expression for item in iterable]`
+
+<div style="margin-left:20px;">
+<details>
+<summary>📍</summary>
+
+```python
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+
+upper_fruits = []
+for f in fruits:
+    upper_fruits.append(f.upper())
+```
+is the same as:
+        
+```python
+upper_fruits = [f.upper() for f in fruits]
+```
+</details></div></details></div></details></div>
+- To check if the number of letters is not 5 → `len(...) != 5`
+- To check if the guess is not alphabetic → `.isalpha()`
+- To check if the guess is not a valid word → `not in`
 </details>
 </div>
 
@@ -14,8 +79,11 @@
 <details>
 <summary>📝 Test Code</summary>
 ```python 
-
-
+import urllib.request
+url = "https://raw.githubusercontent.com/ed-tq/Python-Word-Guessing-Console-Game/refs/heads/main/06-test.py"
+with urllib.request.urlopen(url) as response:
+    code = response.read().decode("utf-8")
+exec(code)
 ```
 </details>
 </div>

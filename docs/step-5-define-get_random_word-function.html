@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>📌 Step 5: Define ’get_random_word` function | Word Guess Project Instructions</title>
-  <meta name="description" content="📌 Step 5: Define ’get_random_word` function | Word Guess Project Instructions" />
+  <title>📌 Step 5: Define get_random_word function | Word Guess Project Instructions</title>
+  <meta name="description" content="📌 Step 5: Define get_random_word function | Word Guess Project Instructions" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="📌 Step 5: Define ’get_random_word` function | Word Guess Project Instructions" />
+  <meta property="og:title" content="📌 Step 5: Define get_random_word function | Word Guess Project Instructions" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="📌 Step 5: Define ’get_random_word` function | Word Guess Project Instructions" />
+  <meta name="twitter:title" content="📌 Step 5: Define get_random_word function | Word Guess Project Instructions" />
   
   
   
@@ -29,7 +29,7 @@
   
   
 <link rel="prev" href="step-4-define-list_of_words-function.html"/>
-<link rel="next" href="step-define.html"/>
+<link rel="next" href="step-6-define-get_player_guess-function.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -140,9 +140,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="step-2-import-modules.html"><a href="step-2-import-modules.html"><i class="fa fa-check"></i>📌 Step 2: <code>Import</code> Modules</a></li>
 <li class="chapter" data-level="" data-path="step-3-define-get_started-function.html"><a href="step-3-define-get_started-function.html"><i class="fa fa-check"></i>📌 Step 3: Define <code>get_started</code> function</a></li>
 <li class="chapter" data-level="" data-path="step-4-define-list_of_words-function.html"><a href="step-4-define-list_of_words-function.html"><i class="fa fa-check"></i>📌 Step 4: Define <code>list_of_words</code> function</a></li>
-<li class="chapter" data-level="" data-path="step-5-define-get_random_word-function.html"><a href="step-5-define-get_random_word-function.html"><i class="fa fa-check"></i>📌 Step 5: Define ’get_random_word` function</a></li>
+<li class="chapter" data-level="" data-path="step-5-define-get_random_word-function.html"><a href="step-5-define-get_random_word-function.html"><i class="fa fa-check"></i>📌 Step 5: Define <code>get_random_word</code> function</a></li>
+<li class="chapter" data-level="" data-path="step-6-define-get_player_guess-function.html"><a href="step-6-define-get_player_guess-function.html"><i class="fa fa-check"></i>📌 Step 6: Define <code>get_player_guess</code> function</a></li>
 <li class="chapter" data-level="" data-path="step-define.html"><a href="step-define.html"><i class="fa fa-check"></i>📌 Step : Define</a></li>
-<li class="chapter" data-level="" data-path="step-define-1.html"><a href="step-define-1.html"><i class="fa fa-check"></i>📌 Step : Define</a></li>
+<li class="chapter" data-level="" data-path="quiz.html"><a href="quiz.html"><i class="fa fa-check"></i>🧠 Quiz</a></li>
+<li class="chapter" data-level="" data-path="feedback.html"><a href="feedback.html"><i class="fa fa-check"></i>📩 Feedback</a></li>
 </ul>
 
       </nav>
@@ -161,7 +163,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="step-5-define-get_random_word-function" class="section level1 hasAnchor">
-<h1>📌 Step 5: Define ’get_random_word` function<a href="#step-5-define-get_random_word-function" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1>📌 Step 5: Define <code>get_random_word</code> function<a href="#step-5-define-get_random_word-function" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
 <li>This function takes a list <code>words</code> as an argument.</li>
 <li>The function picks a random position (index) in the list.</li>
@@ -176,7 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Use <code>random.randrange()</code> or <code>random.randint()</code> to get random position/number. Store this number in a variable.
 <details>
 <summary>
-ℹ️ More
+ℹ️ More Information
 </summary>
 <ul>
 <li><code>.randrange(start, stop) or (stop)</code> generates a number from start or 0 (default) to stop - 1 (start number inclusive, stop number not inclusive).
@@ -207,22 +209,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 📝 Test Code
 </summary>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="step-5-define-get_random_word-function.html#cb5-1" tabindex="-1"></a><span class="cf">try</span>:</span>
-<span id="cb5-2"><a href="step-5-define-get_random_word-function.html#cb5-2" tabindex="-1"></a>  words <span class="op">=</span> [<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;cherry&quot;</span>, <span class="st">&quot;grape&quot;</span>, <span class="st">&quot;melon&quot;</span>]</span>
-<span id="cb5-3"><a href="step-5-define-get_random_word-function.html#cb5-3" tabindex="-1"></a>  result <span class="op">=</span> get_random_word(words)</span>
-<span id="cb5-4"><a href="step-5-define-get_random_word-function.html#cb5-4" tabindex="-1"></a>  <span class="cf">if</span> result <span class="kw">in</span> words:</span>
-<span id="cb5-5"><a href="step-5-define-get_random_word-function.html#cb5-5" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&quot;✅ Returned word is in the list&quot;</span>)</span>
-<span id="cb5-6"><a href="step-5-define-get_random_word-function.html#cb5-6" tabindex="-1"></a>  <span class="cf">else</span>:</span>
-<span id="cb5-7"><a href="step-5-define-get_random_word-function.html#cb5-7" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&quot;❌ Returned word is not in the list&quot;</span>)</span>
-<span id="cb5-8"><a href="step-5-define-get_random_word-function.html#cb5-8" tabindex="-1"></a>  results <span class="op">=</span> <span class="bu">set</span>()</span>
-<span id="cb5-9"><a href="step-5-define-get_random_word-function.html#cb5-9" tabindex="-1"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
-<span id="cb5-10"><a href="step-5-define-get_random_word-function.html#cb5-10" tabindex="-1"></a>      results.add(get_random_word(words))</span>
-<span id="cb5-11"><a href="step-5-define-get_random_word-function.html#cb5-11" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">len</span>(results) <span class="op">&gt;</span> <span class="dv">1</span>:</span>
-<span id="cb5-12"><a href="step-5-define-get_random_word-function.html#cb5-12" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&quot;✅ Function returns different words (randomness works)&quot;</span>)</span>
-<span id="cb5-13"><a href="step-5-define-get_random_word-function.html#cb5-13" tabindex="-1"></a>  <span class="cf">else</span>:</span>
-<span id="cb5-14"><a href="step-5-define-get_random_word-function.html#cb5-14" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&quot;⚠️ Only one word returned in 10 tries (might still be random, but unlikely)&quot;</span>)</span>
-<span id="cb5-15"><a href="step-5-define-get_random_word-function.html#cb5-15" tabindex="-1"></a><span class="cf">except</span> <span class="pp">NameError</span>:</span>
-<span id="cb5-16"><a href="step-5-define-get_random_word-function.html#cb5-16" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;❌ Function &#39;get_random_word&#39; not defined&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="step-5-define-get_random_word-function.html#cb5-1" tabindex="-1"></a><span class="im">import</span> urllib.request</span>
+<span id="cb5-2"><a href="step-5-define-get_random_word-function.html#cb5-2" tabindex="-1"></a>url <span class="op">=</span> <span class="st">&quot;https://raw.githubusercontent.com/ed-tq/Python-Word-Guessing-Console-Game/refs/heads/main/05-test.py&quot;</span></span>
+<span id="cb5-3"><a href="step-5-define-get_random_word-function.html#cb5-3" tabindex="-1"></a><span class="cf">with</span> urllib.request.urlopen(url) <span class="im">as</span> response:</span>
+<span id="cb5-4"><a href="step-5-define-get_random_word-function.html#cb5-4" tabindex="-1"></a>    code <span class="op">=</span> response.read().decode(<span class="st">&quot;utf-8&quot;</span>)</span>
+<span id="cb5-5"><a href="step-5-define-get_random_word-function.html#cb5-5" tabindex="-1"></a><span class="bu">exec</span>(code)</span></code></pre></div>
 </details>
 </div>
 
@@ -233,7 +224,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="step-4-define-list_of_words-function.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="step-define.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="step-6-define-get_player_guess-function.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

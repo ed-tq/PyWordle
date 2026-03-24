@@ -2,6 +2,8 @@
 
 Quick links for revision for concepts that you will need to know before starting this project:  
 
+<div style="padding:15px; border-left:5px solid #9c27b0; margin:20px 0; overflow: auto; max-height: 200px">  
+
 ####  A 
 -  [Arrays 🔗](https://www.w3schools.com/python/python_arrays.asp)  
     -  [Lists 🔗](https://www.w3schools.com/python/python_lists.asp)  
@@ -59,3 +61,4 @@ Quick links for revision for concepts that you will need to know before starting
     -  [Formatting 🔗](https://www.w3schools.com/python/python_string_formatting.asp)
     -  [Methods 🔗](https://www.w3schools.com/python/python_ref_string.asp)
 
+</div>

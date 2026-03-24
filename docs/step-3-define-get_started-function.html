@@ -140,9 +140,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="step-2-import-modules.html"><a href="step-2-import-modules.html"><i class="fa fa-check"></i>📌 Step 2: <code>Import</code> Modules</a></li>
 <li class="chapter" data-level="" data-path="step-3-define-get_started-function.html"><a href="step-3-define-get_started-function.html"><i class="fa fa-check"></i>📌 Step 3: Define <code>get_started</code> function</a></li>
 <li class="chapter" data-level="" data-path="step-4-define-list_of_words-function.html"><a href="step-4-define-list_of_words-function.html"><i class="fa fa-check"></i>📌 Step 4: Define <code>list_of_words</code> function</a></li>
-<li class="chapter" data-level="" data-path="step-5-define-get_random_word-function.html"><a href="step-5-define-get_random_word-function.html"><i class="fa fa-check"></i>📌 Step 5: Define ’get_random_word` function</a></li>
+<li class="chapter" data-level="" data-path="step-5-define-get_random_word-function.html"><a href="step-5-define-get_random_word-function.html"><i class="fa fa-check"></i>📌 Step 5: Define <code>get_random_word</code> function</a></li>
+<li class="chapter" data-level="" data-path="step-6-define-get_player_guess-function.html"><a href="step-6-define-get_player_guess-function.html"><i class="fa fa-check"></i>📌 Step 6: Define <code>get_player_guess</code> function</a></li>
 <li class="chapter" data-level="" data-path="step-define.html"><a href="step-define.html"><i class="fa fa-check"></i>📌 Step : Define</a></li>
-<li class="chapter" data-level="" data-path="step-define-1.html"><a href="step-define-1.html"><i class="fa fa-check"></i>📌 Step : Define</a></li>
+<li class="chapter" data-level="" data-path="quiz.html"><a href="quiz.html"><i class="fa fa-check"></i>🧠 Quiz</a></li>
+<li class="chapter" data-level="" data-path="feedback.html"><a href="feedback.html"><i class="fa fa-check"></i>📩 Feedback</a></li>
 </ul>
 
       </nav>
@@ -167,16 +169,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Asks for user name.</li>
 <li>Prints:</li>
 </ol>
-<pre><code>Welcome to Wordle 101 [userName]
-
-========================================================================
-                                 Rules
-You have 6 guesses to figure out the solution.
-All solutions are words that are 5 letters long.
-Letters that have been guessed correctly are displayed in uppercase.
-Letters that are in the word but have been guessed in the wrong location
-are displayed in lowercase.
-========================================================================</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="step-3-define-get_started-function.html#cb2-1" tabindex="-1"></a>Welcome to Wordle <span class="dv">101</span> [userName]</span>
+<span id="cb2-2"><a href="step-3-define-get_started-function.html#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="step-3-define-get_started-function.html#cb2-3" tabindex="-1"></a><span class="op">========================================================================</span></span>
+<span id="cb2-4"><a href="step-3-define-get_started-function.html#cb2-4" tabindex="-1"></a>                                 Rules</span>
+<span id="cb2-5"><a href="step-3-define-get_started-function.html#cb2-5" tabindex="-1"></a>You have <span class="dv">6</span> guesses to figure out the solution.</span>
+<span id="cb2-6"><a href="step-3-define-get_started-function.html#cb2-6" tabindex="-1"></a>All solutions are words that are <span class="dv">5</span> letters <span class="bu">long</span>.</span>
+<span id="cb2-7"><a href="step-3-define-get_started-function.html#cb2-7" tabindex="-1"></a>Letters that have been guessed correctly are displayed <span class="kw">in</span> uppercase.</span>
+<span id="cb2-8"><a href="step-3-define-get_started-function.html#cb2-8" tabindex="-1"></a>Letters that are <span class="kw">in</span> the word but have been guessed <span class="kw">in</span> the wrong location</span>
+<span id="cb2-9"><a href="step-3-define-get_started-function.html#cb2-9" tabindex="-1"></a>are displayed <span class="kw">in</span> lowercase.</span>
+<span id="cb2-10"><a href="step-3-define-get_started-function.html#cb2-10" tabindex="-1"></a><span class="op">========================================================================</span></span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li>Returns file name.</li>
 </ol>
@@ -196,7 +198,7 @@ are displayed in lowercase.
 
 <details>
 <summary>
-ℹ️ More
+ℹ️ More Information
 </summary>
 <ul>
 <li>You can use f-string formatting to print a variable in a string. This works for any variable type (e.g. <code>str</code>, <code>int</code>).

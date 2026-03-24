@@ -9,7 +9,7 @@ output:
     scroll_highlight: yes
 ---
 
-#  ⚠️ Instructions Disclaimer
+#  ⚠️ Instructions Disclaimer  
 -  The purpose of guide is to help you write and test your code.
 -  It is important you do the steps in order.
 -  This guide will give you test codes you can copy and paste into your code file to simulate input/output. It should be placed after your code.
