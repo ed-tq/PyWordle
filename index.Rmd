@@ -16,3 +16,5 @@ output:
 -  If your code passes the test code you should get all ✅,  else ❌. Look at errors to edit your code. 
 -  Delete test code after you have successfully passed all checks. 
 -  You are encouraged to attempt before using 💡hints.
+-  The files, code, and links in this project are safe to download, open, and run.
+However, always exercise caution when downloading, opening, or running files, code, or clicking links from any unknown source.

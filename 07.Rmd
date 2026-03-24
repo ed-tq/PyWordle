@@ -1,6 +1,22 @@
-#  📌 Step : Define 
+#  📌 Step : Define `play_round` function
 
+This functions stimulates one round of the game.
 
+1.  Takes an argument called `word`.
+2.  Initialise `guesses` to 1
+3.  Create an initial `game_state` tuple of five underscores.
+4.  Repeatedly ask the player for a guess by calling the function that gets player guess.
+5.  Compare the guess to the target `word`.  
+    - Do this by comparing each letter.
+6.  Display each letter as:  
+    - uppercase if in correct position
+    - lowercase if it is in the word but wrong position
+    - as an underscore if not in the word
+7.  Stop if the user guesses the word correctly or after 6 guesses
+8.  Return a tuple where:
+    - first arguement is the number of guesses used
+    - second argument is `True` is the word was guesses, otherwise `False`
+  
 <div style="background:#f0f8ff; padding:15px; border-left:5px solid #2c7be5; margin:20px 0;">
 <details>
 <summary>💡 Hint</summary>
