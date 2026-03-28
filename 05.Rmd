@@ -11,7 +11,7 @@
     <details>
     <summary>ℹ️ More Information</summary>
     -  `.randrange(start, stop) or (stop)` generates a number from start or 0 (default) to stop - 1 (start number inclusive, stop number not inclusive).  
-      -  `.randint(a, b)` generates a number from a to b (both numbers inclusive).  
+    -  `.randint(a, b)` generates a number from a to b (both numbers inclusive).  
       -  Use len(words) to get the total number on items in the list `words`.  
       -  Make sure the index number exists in the `words` list (index starts at 0 to len(words)-1).
 

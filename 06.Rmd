@@ -1,7 +1,7 @@
 #  📌 Step 6: Define `get_player_guess` function  
 
-1.  This function opens the file words.txt and reads all the words into a list called valid_words, where each word is stripped of whitespace and converted to lowercase.  
-2. The function then repeatedly prompts the user to enter a guess using a while True loop. The user input should also be converted to lowercase.    
+1.  This function opens the file `words.txt` and reads all the words into a list, where each word is stripped of whitespace and converted to lowercase.  
+2. The function then repeatedly prompts the user to enter a guess using a `while True` loop. The user input should also be converted to lowercase.    
 <details>
     <summary>ℹ️</summary>  
     - The words from the file and the user’s input are converted to lowercase to ensure consistency when comparing values during validation. 
@@ -22,7 +22,7 @@
 - You need to read words from a file called `words.txt`. Think about how to open a file safely in Python.  
   Note: when you open a file you need to make sure to close it.  
 
-<div style="margin-left:20px;">
+<div style="margin-left:40px;">
 <details>
 <summary>ℹ️</summary>
 
@@ -33,11 +33,11 @@
 
 - Once the file is open, you can loop through each line in the file to access the words.
 
-<div style="margin-left:20px;">
+<div style="margin-left:40px;">
 <details>
 <summary>ℹ️</summary>
 
-- Words may include extra whitespace or newline characters. Use `strip()` to clean each word  
+- Words may include extra whitespace or newline characters. Use `.strip()` to clean each word  
 - Convert each word to lowercase using `.lower()`  
 - Store the cleaned words in a list using a list comprehension  
 

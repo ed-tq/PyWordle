@@ -185,14 +185,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ℹ️ More Information
 </summary>
 <ul>
-<li><code>.randrange(start, stop) or (stop)</code> generates a number from start or 0 (default) to stop - 1 (start number inclusive, stop number not inclusive).
-<ul>
+<li><code>.randrange(start, stop) or (stop)</code> generates a number from start or 0 (default) to stop - 1 (start number inclusive, stop number not inclusive).<br />
+</li>
 <li><code>.randint(a, b)</code> generates a number from a to b (both numbers inclusive).<br />
 </li>
 <li>Use len(words) to get the total number on items in the list <code>words</code>.<br />
 </li>
 <li>Make sure the index number exists in the <code>words</code> list (index starts at 0 to len(words)-1).</li>
-</ul></li>
 </ul></li>
 <li>To return a word from the list of words, think about indexing/how to access an item from a list.<br />
 
@@ -213,11 +212,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 📝 Test Code
 </summary>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="step-5-define-get_random_word-function.html#cb6-1" tabindex="-1"></a><span class="im">import</span> urllib.request</span>
-<span id="cb6-2"><a href="step-5-define-get_random_word-function.html#cb6-2" tabindex="-1"></a>url <span class="op">=</span> <span class="st">&quot;https://raw.githubusercontent.com/ed-tq/Python-Word-Guessing-Console-Game/refs/heads/main/05-test.py&quot;</span></span>
-<span id="cb6-3"><a href="step-5-define-get_random_word-function.html#cb6-3" tabindex="-1"></a><span class="cf">with</span> urllib.request.urlopen(url) <span class="im">as</span> response:</span>
-<span id="cb6-4"><a href="step-5-define-get_random_word-function.html#cb6-4" tabindex="-1"></a>    code <span class="op">=</span> response.read().decode(<span class="st">&quot;utf-8&quot;</span>)</span>
-<span id="cb6-5"><a href="step-5-define-get_random_word-function.html#cb6-5" tabindex="-1"></a><span class="bu">exec</span>(code)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="step-5-define-get_random_word-function.html#cb3-1" tabindex="-1"></a><span class="im">import</span> urllib.request</span>
+<span id="cb3-2"><a href="step-5-define-get_random_word-function.html#cb3-2" tabindex="-1"></a>url <span class="op">=</span> <span class="st">&quot;https://raw.githubusercontent.com/ed-tq/Python-Word-Guessing-Console-Game/refs/heads/main/05-test.py&quot;</span></span>
+<span id="cb3-3"><a href="step-5-define-get_random_word-function.html#cb3-3" tabindex="-1"></a><span class="cf">with</span> urllib.request.urlopen(url) <span class="im">as</span> response:</span>
+<span id="cb3-4"><a href="step-5-define-get_random_word-function.html#cb3-4" tabindex="-1"></a>    code <span class="op">=</span> response.read().decode(<span class="st">&quot;utf-8&quot;</span>)</span>
+<span id="cb3-5"><a href="step-5-define-get_random_word-function.html#cb3-5" tabindex="-1"></a><span class="bu">exec</span>(code)</span></code></pre></div>
 </details>
 </div>
 
