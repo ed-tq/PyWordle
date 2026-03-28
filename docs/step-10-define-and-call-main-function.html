@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>📌 Step 9: Define play_game function | Word Guess Project Instructions</title>
-  <meta name="description" content="📌 Step 9: Define play_game function | Word Guess Project Instructions" />
+  <title>📌 Step 10: Define and call main function | Word Guess Project Instructions</title>
+  <meta name="description" content="📌 Step 10: Define and call main function | Word Guess Project Instructions" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="📌 Step 9: Define play_game function | Word Guess Project Instructions" />
+  <meta property="og:title" content="📌 Step 10: Define and call main function | Word Guess Project Instructions" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="📌 Step 9: Define play_game function | Word Guess Project Instructions" />
+  <meta name="twitter:title" content="📌 Step 10: Define and call main function | Word Guess Project Instructions" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="step-8-define-play_more-function.html"/>
-<link rel="next" href="step-10-define-and-call-main-function.html"/>
+<link rel="prev" href="step-9-define-play_game-function.html"/>
+<link rel="next" href="quiz.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -166,110 +166,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="step-9-define-play_game-function" class="section level1 hasAnchor">
-<h1>📌 Step 9: Define <code>play_game</code> function<a href="#step-9-define-play_game-function" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This fucntions runs the full game of 1 or more rounds and shows summary.</p>
+<div id="step-10-define-and-call-main-function" class="section level1 hasAnchor">
+<h1>📌 Step 10: Define and call <code>main</code> function<a href="#step-10-define-and-call-main-function" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+window.addEventListener("load", function () {
+  confetti({
+    particleCount: 200,
+    spread: 100,
+    origin: { y: 0.6 }
+  });
+});
+</script>
+<p>This function runs the game.</p>
 <ol style="list-style-type: decimal">
-<li>This functions takes one argument <code>filename</code></li>
-<li>Reads the file and turn the file contents into a list of words</li>
-<li>Initialises:
-<ul>
-<li>rounds</li>
-<li>number of games</li>
-<li>number of wins</li>
-<li>a dictionary to track wins in across 1 to 6 guesses</li>
-</ul></li>
-<li>Repeatedly call the appropriate function that play a round</li>
-<li>After each round:
-<ul>
-<li>check if player won</li>
-<li>print success or failure message showing the correct word</li>
-<li>update number of wins if player won</li>
-</ul></li>
-<li>Ask the player if they want to continue
-<ul>
-<li>‘Y’ to continue</li>
-<li>‘N’ to stop</li>
-<li>else print error message and ask again until valid</li>
-</ul></li>
-<li>If player stops playing:
-<ul>
-<li>print summary showing win percentage and win distribution</li>
-</ul></li>
-<li>Function should end after printing the summary</li>
+<li>This functions should call the appropriate function that returns the file name.</li>
+<li>Call the appropriate function that takes the file name and opens and reads it.</li>
 </ol>
+<p>Now we can call the function to run the game 🎉</p>
 <div style="background:#f0f8ff; padding:15px; border-left:5px solid #2c7be5; margin:20px 0;">
 <details>
 <summary>
 💡 Hint
 </summary>
 <ul>
-<li>First open the file and read the words into a list.
-<ul>
-<li>You can use <code>.split()</code></li>
-</ul></li>
-<li>Do not forget to close the file after reading.</li>
-<li>The dictionary counts how many wins happened in 1 guess, 2 guesses, and so on (up to 6).</li>
-<li>Use a <code>while True:</code> loop so the game keeps running until the player chooses to stop.</li>
-<li>At the start of each round, increase the round number by 1.</li>
-<li>The function in that plays a round takes two arguments and returns a <strong>tuple</strong>.
-<ul>
-<li>You need to consider what arguments it takes when calling and how to use its return value in your code.</li>
-</ul></li>
-</ul>
-<div style="margin-left:60px;">
-<details>
-<summary>
-ℹ️
-</summary>
-<ul>
-<li>The value returned by the function includes:
-<ul>
-<li>the game result</li>
-<li>the chosen word</li>
-<li>You can use indexing to access them.</li>
-</ul></li>
-</ul>
-<div style="margin-left:20px;">
-<details>
-<summary>
-⭐
-</summary>
-<pre><code>  game = function(read, rounds)
-  word = game[1]</code></pre>
-</details>
-</div>
-</details>
-</div>
-<ul>
-<li>If the round was won update:
-<ul>
-<li>number of wins</li>
-<li>the correct value inside dictionary of wins</li>
-</ul></li>
-<li>Always increase number of games after each round</li>
-<li>The win percentage can be calculated using:</li>
-</ul>
-<div style="margin-left:40px;">
-<details>
-<summary>
-⭐
-</summary>
-<pre><code>percentage = round((number_of_wins / number_of_games) * 100)</code></pre>
-</details>
-</div>
-<ul>
-<li>The win distribution is displays the number of wins across the number of guesses 1-6:
-<ul>
-<li>if the number of wins is 0, print the number</li>
-<li>otherwise print <code>#</code> repeated by number of wins for each number of guesses, followed by count
-<details>
-<summary>
-⭐
-</summary>
-<code>'#' * (num_repeats)</code></li>
-</ul>
-</details></li>
+<li>By now you should be able to understand what each function does, how each function works, and how to call them. Look at your code so far or refer to glossary for help.</li>
+<li>You can also run the project code on a different .py file to see how the project should run.</li>
 </ul>
 </details>
 </div>
@@ -278,11 +200,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 📝 Test Code
 </summary>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="step-9-define-play_game-function.html#cb5-1" tabindex="-1"></a><span class="im">import</span> urllib.request</span>
-<span id="cb5-2"><a href="step-9-define-play_game-function.html#cb5-2" tabindex="-1"></a>url <span class="op">=</span> <span class="st">&quot;https://raw.githubusercontent.com/ed-tq/Python-Word-Guessing-Console-Game/refs/heads/main/09-test.py&quot;</span></span>
-<span id="cb5-3"><a href="step-9-define-play_game-function.html#cb5-3" tabindex="-1"></a><span class="cf">with</span> urllib.request.urlopen(url) <span class="im">as</span> response:</span>
-<span id="cb5-4"><a href="step-9-define-play_game-function.html#cb5-4" tabindex="-1"></a>    code <span class="op">=</span> response.read().decode(<span class="st">&quot;utf-8&quot;</span>)</span>
-<span id="cb5-5"><a href="step-9-define-play_game-function.html#cb5-5" tabindex="-1"></a><span class="bu">exec</span>(code)</span></code></pre></div>
+The code should run exactly like the project code when you call the <code>main</code> function.
 </details>
 </div>
 
@@ -292,8 +210,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="step-8-define-play_more-function.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="step-10-define-and-call-main-function.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="step-9-define-play_game-function.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="quiz.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

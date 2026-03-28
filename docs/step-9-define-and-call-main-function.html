@@ -168,12 +168,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="step-9-define-and-call-main-function" class="section level1 hasAnchor">
 <h1>📌 Step 9: Define and call <code>main</code> function<a href="#step-9-define-and-call-main-function" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+window.addEventListener("load", function () {
+  confetti({
+    particleCount: 120,
+    spread: 80,
+    origin: { y: 0.6 }
+  });
+});
+</script>
 <p>This function runs the game.</p>
 <ol style="list-style-type: decimal">
 <li>This functions should call the appropriate function that returns the file name.</li>
 <li>Call the appropriate function that takes the file name and opens and reads it.</li>
 </ol>
-<p>Now we can call the function to run the game.</p>
+<p>Now we can call the function to run the game 🎉</p>
 <div style="background:#f0f8ff; padding:15px; border-left:5px solid #2c7be5; margin:20px 0;">
 <details>
 <summary>
@@ -190,11 +200,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 📝 Test Code
 </summary>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="step-9-define-and-call-main-function.html#cb16-1" tabindex="-1"></a><span class="im">import</span> urllib.request</span>
-<span id="cb16-2"><a href="step-9-define-and-call-main-function.html#cb16-2" tabindex="-1"></a>url <span class="op">=</span> <span class="st">&quot;https://raw.githubusercontent.com/ed-tq/Python-Word-Guessing-Console-Game/refs/heads/main/090-test.py&quot;</span></span>
-<span id="cb16-3"><a href="step-9-define-and-call-main-function.html#cb16-3" tabindex="-1"></a><span class="cf">with</span> urllib.request.urlopen(url) <span class="im">as</span> response:</span>
-<span id="cb16-4"><a href="step-9-define-and-call-main-function.html#cb16-4" tabindex="-1"></a>    code <span class="op">=</span> response.read().decode(<span class="st">&quot;utf-8&quot;</span>)</span>
-<span id="cb16-5"><a href="step-9-define-and-call-main-function.html#cb16-5" tabindex="-1"></a><span class="bu">exec</span>(code)</span></code></pre></div>
+The code should run exactly like the project code when you call the <code>main</code> function.
 </details>
 </div>
 

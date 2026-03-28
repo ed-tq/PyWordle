@@ -37,7 +37,7 @@ This functions stimulates one round of the game.
 </details>
 </div>
 
-<div style="margin-left:0px;">
+<div style="margin-left:20px;">
 <details>
 <summary>ℹ️</summary>
 

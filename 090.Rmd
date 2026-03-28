@@ -1,11 +1,23 @@
-#  📌 Step 9: Define and call `main` function  
+#  📌 Step 10: Define and call `main` function  
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+window.addEventListener("load", function () {
+  confetti({
+    particleCount: 200,
+    spread: 100,
+    origin: { y: 0.6 }
+  });
+});
+</script>
 
 This function runs the game.
 
 1.  This functions should call the appropriate function that returns the file name.
 2.  Call the appropriate function that takes the file name and opens and reads it.
 
-Now we can call the function to run the game.
+Now we can call the function to run the game 🎉
 
 
 <div style="background:#f0f8ff; padding:15px; border-left:5px solid #2c7be5; margin:20px 0;">
@@ -17,16 +29,10 @@ Now we can call the function to run the game.
 </details>
 </div>
 
-
 <div style="background:#fffaf0; padding:15px; border-left:5px solid #FB8C00; margin:20px 0;">
 <details>
 <summary>📝 Test Code</summary>
-```python 
-import urllib.request
-url = "https://raw.githubusercontent.com/ed-tq/Python-Word-Guessing-Console-Game/refs/heads/main/090-test.py"
-with urllib.request.urlopen(url) as response:
-    code = response.read().decode("utf-8")
-exec(code)
-```
+The code should run exactly like the project code when you call the `main` function.
 </details>
 </div>
+

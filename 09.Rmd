@@ -1,28 +1,26 @@
 #  📌 Step 9: Define `play_game` function  
 
-This fucntions runs the full game of 1 or mroe rounds and shows summary
+This fucntions runs the full game of 1 or more rounds and shows summary.
 
 1.  This functions takes one argument `filename`
-2.  Opens the file 
-3.  Reads the file
-4.  Closes the file
+3.  Reads the file and turn the file contents into a list of words
 5.  Initialises:
     - rounds
     - number of games
     - number of wins
     - a dictionary to track wins in across 1 to 6 guesses
-6. repeatedly call the appropriate function to play rounds
-7.  after each round:
+6.  Repeatedly call the appropriate function that play a round
+7.  After each round:
     - check if player won
     - print success or failure message showing the correct word
     - update number of wins if player won
-8.  ask the player if they want to continue
+8.  Ask the player if they want to continue
     - 'Y' to continue
     - 'N' to stop
     - else print error message and ask again until valid
 9.  If player stops playing:
     - print summary showing win percentage and win distribution
-10. fucntion ends after printing the summary
+10. Function should end after printing the summary
 
 
 <div style="background:#f0f8ff; padding:15px; border-left:5px solid #2c7be5; margin:20px 0;">
@@ -30,41 +28,29 @@ This fucntions runs the full game of 1 or mroe rounds and shows summary
 <summary>💡 Hint</summary>
 
 - First open the file and read the words into a list.
-- You can use `.read().split()` to turn the file contents into a list of words.
+    - You can use `.split()`
 - Do not forget to close the file after reading.
-
-<div style="margin-left:20px;">
-<details>
-<summary>ℹ️</summary>
-
-- You need counters to keep track of:
-  - the round number
-  - the total number of games played
-  - the total number of wins
-- You also need a dictionary to count how many wins happened in 1 guess, 2 guesses, and so on up to 6 guesses.
-
-</details>
-</div>
-
+- The dictionary counts how many wins happened in 1 guess, 2 guesses, and so on (up to 6).
 - Use a `while True:` loop so the game keeps running until the player chooses to stop.
 - At the start of each round, increase the round number by 1.
-- Call `play_more(read, rounds)` to play one round.
-
-<div style="margin-left:20px;">
+- The function in that plays a round takes two arguments and returns a **tuple**.
+  - You need to consider what arguments it takes when calling and how to use its return value in your code.
+  
+<div style="margin-left:60px;">
 <details>
 <summary>ℹ️</summary>
 
-- The value returned by `play_more(read, rounds)` includes:
+- The value returned by the function includes:
   - the game result
   - the chosen word
-- You can use indexing to access them.
+  - You can use indexing to access them.
 
 <div style="margin-left:20px;">
 <details>
 <summary>⭐</summary>
 
-    game = play_more(read, rounds)
-    word = game[1]
+      game = function(read, rounds)
+      word = game[1]
 
 </details>
 </div>
@@ -72,36 +58,30 @@ This fucntions runs the full game of 1 or mroe rounds and shows summary
 </details>
 </div>
 
-- if the round was won update:
+- If the round was won update:
   - number of wins
   - the correct value inside dictionary of wins
-- always increase number of games after each round
-
-<div style="margin-left:20px;">
-<details>
-<summary>ℹ️</summary>
-
-- Ask the user if they want to continue by using input().
-- Keep asking until they enter either 'Y' or 'N'.
-
-</details>
-</div>
-
-- If the user enters 'N', print the summary and stop the loop.
+- Always increase number of games after each round
 - The win percentage can be calculated using:
 
-<div style="margin-left:20px;">
+<div style="margin-left:40px;">
 <details>
 <summary>⭐</summary>
 
-    percentage = round(9number of wins / number of games) * 100)
+    percentage = round((number_of_wins / number_of_games) * 100)
 
 </details>
 </div>
 
-- For the win distribution:
-  - if the count is 0, print the number
-  - otherwise print `#` repeated that many times, followed by count
+- The win distribution is displays the number of wins across the number of guesses 1-6:
+  - if the number of wins is 0, print the number
+  - otherwise print `#` repeated by number of wins for each number of guesses, followed by count
+  <details>
+  <summary>⭐</summary>
+  
+      `'#' * (num_repeats)`
+  
+  </details>
 
 </details>
 </div>
