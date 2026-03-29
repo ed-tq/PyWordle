@@ -8,9 +8,13 @@ Refer to this for any terms/concepts you are unfamiliar with.
 ####  A 
 -  [Arrays 🔗](https://www.w3schools.com/python/python_arrays.asp)  
     -  [Lists 🔗](https://www.w3schools.com/python/python_lists.asp)  
+        -  [Accessing 🔗](https://www.w3schools.com/python/python_lists_access.asp)
+        -  [Comprehension 🔗](https://www.w3schools.com/python/python_lists_comprehension.asp)
+        -  [Looping 🔗](https://www.w3schools.com/python/python_lists_loop.asp)
         -  [Methods 🔗](https://www.w3schools.com/python/python_ref_list.asp)
     -  [Tuples 🔗](https://www.w3schools.com/python/python_tuples.asp)  
-        - [Methods 🔗](https://www.w3schools.com/python/python_ref_tuple.asp)
+        -  [Accessing 🔗](https://www.w3schools.com/python/python_tuples_access.asp)
+        -  [Methods 🔗](https://www.w3schools.com/python/python_ref_tuple.asp)
     
 ---  
 
@@ -23,19 +27,22 @@ Refer to this for any terms/concepts you are unfamiliar with.
 ---
     
 ####  D
--  [Dictionaries 🔗](https://www.w3schools.com/python/python_dictionaries.asp)  
+-  [Dictionaries 🔗](https://www.w3schools.com/python/python_dictionaries.asp)
+    -  [Accessing 🔗](https://www.w3schools.com/python/python_dictionaries_access.asp)
+    -  [Looping 🔗](https://www.w3schools.com/python/python_dictionaries_loop.asp)
     -  [Methods 🔗](https://www.w3schools.com/python/python_ref_dictionary.asp)  
     
 ---
     
 ####  F 
 -  [File Handling 🔗](https://www.w3schools.com/python/python_file_handling.asp)
-    -  [Read 🔗](https://www.w3schools.com/python/python_file_open.asp)  
+    -  [Reading 🔗](https://www.w3schools.com/python/python_file_open.asp)  
     -  [Methods 🔗](https://www.w3schools.com/python/python_ref_file.asp)  
     
 -  [Functions 🔗](https://www.w3schools.com/python/python_functions.asp) 
     - [Built-in Functions 🔗](https://www.w3schools.com/python/python_ref_functions.asp)
-      -  [Range 🔗](https://www.w3schools.com/python/python_range.asp)  
+      -  [Range 🔗](https://www.w3schools.com/python/python_range.asp)
+      -  [Length 🔗](https://www.w3schools.com/python/ref_func_len.asp)
 
 ---
 
@@ -78,8 +85,9 @@ Refer to this for any terms/concepts you are unfamiliar with.
 ---
 
 ####  S
--  [Strings 🔗](https://www.w3schools.com/python/python_strings.asp)
+-  [Strings (accessing and looping) 🔗](https://www.w3schools.com/python/python_strings.asp)
     -  [Formatting 🔗](https://www.w3schools.com/python/python_string_formatting.asp)
-    -  [Methods 🔗](https://www.w3schools.com/python/python_ref_string.asp)  
+    -  [Methods 🔗](https://www.w3schools.com/python/python_ref_string.asp)
+    -  [Modifying 🔗](https://www.w3schools.com/python/python_strings_modify.asp)
 
 </div>
