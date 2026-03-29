@@ -10,12 +10,15 @@ Refer to this for any terms/concepts you are unfamiliar with.
     -  [Lists 🔗](https://www.w3schools.com/python/python_lists.asp)  
         -  [Methods 🔗](https://www.w3schools.com/python/python_ref_list.asp)
     -  [Tuples 🔗](https://www.w3schools.com/python/python_tuples.asp)  
+        - [Methods 🔗](https://www.w3schools.com/python/python_ref_tuple.asp)
     
 ---  
 
 ####  C
 -  Conditions  
-    -  [If Statements 🔗](https://www.w3schools.com/python/python_conditions.asp)   
+    -  [If Statements 🔗](https://www.w3schools.com/python/python_conditions.asp)  
+    -  [Elif Statements 🔗](https://www.w3schools.com/python/python_if_elif.asp)
+    -  [Else Statements 🔗](https://www.w3schools.com/python/python_if_else.asp)  
     
 ---
     
@@ -30,8 +33,9 @@ Refer to this for any terms/concepts you are unfamiliar with.
     -  [Read 🔗](https://www.w3schools.com/python/python_file_open.asp)  
     -  [Methods 🔗](https://www.w3schools.com/python/python_ref_file.asp)  
     
--  [Functions 🔗](https://www.w3schools.com/python/python_functions.asp)    
-    -  [Range 🔗](https://www.w3schools.com/python/python_range.asp)  
+-  [Functions 🔗](https://www.w3schools.com/python/python_functions.asp) 
+    - [Built-in Functions 🔗](https://www.w3schools.com/python/python_ref_functions.asp)
+      -  [Range 🔗](https://www.w3schools.com/python/python_range.asp)  
 
 ---
 
@@ -40,16 +44,32 @@ Refer to this for any terms/concepts you are unfamiliar with.
 
 ---
 
+#### K
+-  [Keywords 🔗](https://www.w3schools.com/python/python_ref_keywords.asp)
+    -  [Break 🔗](https://www.w3schools.com/python/ref_keyword_break.asp)
+    -  [Continue 🔗](https://www.w3schools.com/python/ref_keyword_continue.asp)
+    
+---
+
 ####  L
--  Loops   
+-  [Loops 🔗](https://www.w3schools.com/programming/prog_loops.php) 
     -  [For 🔗](https://www.w3schools.com/python/python_for_loops.asp)    
     -  [While 🔗](https://www.w3schools.com/python/python_while_loops.asp)   
     
 ---
 
+####  M
+
+-  [Modules 🔗](https://www.w3schools.com/python/python_modules.asp)
+    -  [Random 🔗](https://www.w3schools.com/python/module_random.asp)
+        -  [Randrange 🔗](https://www.w3schools.com/python/ref_random_randrange.asp)
+        -  [Randint 🔗](https://www.w3schools.com/python/ref_random_randint.asp)
+
+---
+
 ####  O
 
--  Operators  
+-  [Operators 🔗](https://www.w3schools.com/python/python_operators.asp)
     -  [Assignment 🔗](https://www.w3schools.com/python/python_operators_assign.asp)
     -  [Comparison 🔗](https://www.w3schools.com/python/python_operators_comparison.asp) 
     -  [Logical 🔗](https://www.w3schools.com/python/python_operators_logical.asp)
@@ -57,13 +77,8 @@ Refer to this for any terms/concepts you are unfamiliar with.
 
 ---
 
-###  R  
-- [Range 🔗](https://www.w3schools.com/python/python_range.asp)
-
----
-
 ####  S
--  Strings  
+-  [Strings 🔗](https://www.w3schools.com/python/python_strings.asp)
     -  [Formatting 🔗](https://www.w3schools.com/python/python_string_formatting.asp)
     -  [Methods 🔗](https://www.w3schools.com/python/python_ref_string.asp)  
 
