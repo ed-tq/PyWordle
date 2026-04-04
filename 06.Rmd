@@ -80,7 +80,7 @@ upper_fruits = [f.upper() for f in fruits]
 <summary>📝 Test Code</summary>
 ```python 
 import urllib.request
-url = "https://raw.githubusercontent.com/ed-tq/Python-Word-Guessing-Console-Game/refs/heads/main/06-test.py"
+url = "https://raw.githubusercontent.com/ed-tq/PyWordle/refs/heads/main/06-test.py"
 with urllib.request.urlopen(url) as response:
     code = response.read().decode("utf-8")
 exec(code)

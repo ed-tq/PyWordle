@@ -9,7 +9,8 @@
 ```python
 import urllib.request
 
-url = "https://wordile-462265725713.australia-southeast1.run.app/get_game"
+url = "https://pywordle-462265725713.australia-southeast1.run.app/get_game"
+
 try:
     with urllib.request.urlopen(url) as response:
         code = response.read().decode()

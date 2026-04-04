@@ -1,6 +1,6 @@
 #  📌 Step 1: Download your files️
 
--  This will download a .zip file, named `yourName_WordGuessProject.zip` with a folder of all the files you need for this project.
+-  This will download a .zip file, named `yourName_PyWordle.zip` with a folder of all the files you need for this project.
 -  It is recommended you save the zip file in the "Documents" directory. 
 -  Right-click on .zip file to extract files.
 -  In the folder you are given a `script.py` file to write your code.
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   input.addEventListener("input", function () {
     let name = input.value.trim();
-    let fname = name ? name + "_WordGuessProject" : "projectFiles";
+    let fname = name ? name + "_PyWordle" : "projectFiles";
     fname = fname.replace(/[<>:"/\\\\|?*]+/g, "");
     if (!fname.toLowerCase().endsWith(".zip")) fname += ".zip";
     link.download = fname;
