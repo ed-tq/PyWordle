@@ -77,7 +77,7 @@ BANNED_NAMES = {
 }
 
 CORS_HEADERS = {
-    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Origin": "https://ed-tq.github.io",
     "Access-Control-Allow-Methods": "POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
 }

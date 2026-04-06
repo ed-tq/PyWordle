@@ -274,11 +274,20 @@ window.addEventListener("load", function () {
     output.textContent = "Running...";
 
     try {
-      const res = await fetch("https://pywordle-run-student-code-462265725713.australia-southeast1.run.app/run_student_code", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ student_code: code, test_code: testCode })
-      });
+      const res = await fetch(
+        "https://pywordle-run-student-code-462265725713.australia-southeast1.run.app",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            student_code: code,
+            test_code: testCode
+          })
+        }
+      );
+      
       const data = await res.json();
       output.textContent = data.output;
 
