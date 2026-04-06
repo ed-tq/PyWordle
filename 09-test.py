@@ -2,7 +2,12 @@ import builtins
 import io
 import sys
 
+score = 0
+total = 3
+
 def test_play_game():
+    global score
+
     test_cases = [
         {
             "name": "one win then stop",
@@ -67,7 +72,7 @@ def test_play_game():
     original_stdout = sys.stdout
     original_open = builtins.open
 
-    for case in test_cases:
+    for i, case in enumerate(test_cases, start=1):
         print(f"Test: {case['name']}")
 
         inputs_iter = iter(case["inputs"])
@@ -112,13 +117,14 @@ def test_play_game():
                 print(f"❌ Missing expected output: {expected}")
 
         if passed:
-            print("✔ All expected output found")
+            print(f"✔ Test {i}: All expected output found")
+            score += 1
         else:
-            print("❌ Output did not match expected content")
+            print(f"❌ Test {i}: Output did not match expected content")
 
         print("Printed output:")
         print(output.strip())
         print("-" * 60)
 
-# run test
 test_play_game()
+print(f"\nPassed {score}/{total} tests")

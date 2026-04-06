@@ -1,13 +1,18 @@
 import io
 import sys
 
+score = 0
+total = 4
+
 def test_play_more():
+    global score
+
     test_cases = [
         {
             "name": "round 1",
             "read": "words.txt",
             "rounds": 1,
-            "mock_words_list": ["apple", "mango", "peach", "grape", "melon"],
+            "mock_words_list": ["apple", "mango", "guava", "lemon", "peach"],
             "mock_word": "grape",
             "mock_game": (3, True),
             "expected_return": ((3, True), "grape"),
@@ -19,7 +24,7 @@ def test_play_more():
             "name": "round 2",
             "read": "words.txt",
             "rounds": 2,
-            "mock_words_list": ["apple", "mango", "peach", "grape", "melon"],
+            "mock_words_list": ["apple", "mango", "guava", "lemon", "peach"],
             "mock_word": "melon",
             "mock_game": (6, False),
             "expected_return": ((6, False), "melon"),
@@ -66,6 +71,7 @@ def test_play_more():
 
         if result == case["expected_return"]:
             print("✔ Return value correct")
+            score += 1
         else:
             print(f"❌ Return value incorrect (expected {case['expected_return']})")
 
@@ -74,9 +80,11 @@ def test_play_more():
 
         if output == case["expected_output"]:
             print("✔ Printed output correct")
+            score += 1
         else:
             print("❌ Printed output incorrect")
 
         print("-" * 60)
 
 test_play_more()
+print(f"\nPassed {score}/{total} tests")

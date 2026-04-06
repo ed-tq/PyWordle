@@ -237,7 +237,7 @@ window.addEventListener("load", function () {
     output.textContent = "Running...";
 
     try {
-      const res = await fetch("https://us-central1-mineral-pride-474706-c6.cloudfunctions.net/run_student_code", {
+      const res = await fetch("https://pywordle-run-student-code-462265725713.australia-southeast1.run.app/run_student_code", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ student_code: code, test_code: testCode })

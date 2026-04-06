@@ -2,7 +2,12 @@ import builtins
 import io
 import sys
 
+score = 0
+total = 5
+
 def test_get_player_guess():
+    global score
+
     test_cases = [
         {
             "name": "valid word first try",
@@ -34,9 +39,8 @@ def test_get_player_guess():
     original_input = builtins.input
     original_stdout = sys.stdout
 
-    for case in test_cases:
+    for i, case in enumerate(test_cases, start=1):
         print(f"Test: {case['name']}".center(50))
-        #print(f"Inputs: {case['inputs']}")
 
         inputs_used = []
         inputs_iter = iter(case["inputs"])
@@ -61,19 +65,21 @@ def test_get_player_guess():
 
         output_lines = [line for line in output.strip().split("\n") if line]
 
-        for i, user_input in enumerate(inputs_used):
+        for j, user_input in enumerate(inputs_used):
             print(f"\nInput: '{user_input}'")
-            if i < len(output_lines):
+            if j < len(output_lines):
                 print("Printed output:")
-                print(output_lines[i])
+                print(output_lines[j])
 
         print(f"Returned: {result}")
 
         if result == case["expected_return"]:
-            print("✔️ Return value correct")
+            print(f"✔ Test {i}: Return value correct")
+            score += 1
         else:
-            print(f"❌ Return value incorrect (expected {case['expected_return']})")
+            print(f"❌ Test {i}: Return value incorrect (expected {case['expected_return']})")
 
         print("-" * 50)
 
 test_get_player_guess()
+print(f"\nPassed {score}/{total} tests")

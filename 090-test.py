@@ -1,3 +1,6 @@
+score = 0
+total = 1
+
 try:
     call_order = []
 
@@ -16,13 +19,16 @@ try:
     expected = ["get_started", "play_game(words.txt)"]
 
     if call_order == expected:
-        print("✔ Function order is correct")
+        print("✔ Test 1: Function order is correct")
+        score += 1
     else:
-        print("❌ Function order is incorrect")
+        print("❌ Test 1: Function order is incorrect")
         print("Expected:", expected)
         print("Got:", call_order)
 
 except NameError:
-    print("❌ Function 'main' not defined")
+    print("❌ Test 1: Function 'main' not defined")
 except Exception as e:
-    print(f"❌ Error: {type(e).__name__} - {e}")
+    print(f"❌ Test 1: Error: {type(e).__name__} - {e}")
+
+print(f"\nPassed {score}/{total} tests")
