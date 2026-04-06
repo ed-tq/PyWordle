@@ -1,4 +1,4 @@
-#  👾 The Project
+#  👾 Try the project
 
 ```{=html}
 <!-- CodeMirror CSS -->
@@ -35,7 +35,7 @@
   }
 
   #editor-wrapper {
-    width: 400px;
+    width: 300px;
   }
 
   .right-panel { 
@@ -47,7 +47,7 @@
   label { font-weight: bold; margin-bottom: 5px; display: block; }
 
   #user_input, #output { 
-    width: 400px; 
+    width: 500px; 
     padding: 10px; 
     margin-bottom: 10px; 
     border: 1px solid #ccc; 
@@ -64,7 +64,7 @@
   }
 
   #enter-btn {
-    width: 400px;
+    width: 100px;
     margin-bottom: 10px;
   }
 
@@ -76,18 +76,20 @@
   }
 </style>
 
-<div id="run-container">
-  <button id="run" style="font-size: 15px;">▶ Run Code</button>
-</div>
 
 <div class="container">
   <div id="editor-wrapper">
     <textarea id="editor">
-# PyWordle runner
-# The game code is stored securely on the server.
-# Click "Run Code" to try the project.  
-# Experiment with different inputs to better understand how it works.
+# -- PyWordle runner -- #
+# Code is hidden.
+# Click "Run Code" to try out the project.
+# Observe the output before entering your input.
+# Experiment with different inputs to gain a better understanding of how it works.
     </textarea>
+    
+  <div id="run-container">
+    <button id="run" style="font-size: 15px; margin-top:8px">▶ Run Code</button>
+  </div>
   </div>
 
   <div class="right-panel">
@@ -146,7 +148,7 @@
   const enterBtn = document.getElementById("enter-btn");
 
   const socket = io(BACKEND_URL, {
-    transports: ["websocket", "polling"]
+    transports: ["websocket"]
   });
 
   socket.on("connect", () => {

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>👾 The Project | PyWordle Project Instructions</title>
-  <meta name="description" content="👾 The Project | PyWordle Project Instructions" />
+  <title>👾 Try the project | PyWordle Project Instructions</title>
+  <meta name="description" content="👾 Try the project | PyWordle Project Instructions" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="👾 The Project | PyWordle Project Instructions" />
+  <meta property="og:title" content="👾 Try the project | PyWordle Project Instructions" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="👾 The Project | PyWordle Project Instructions" />
+  <meta name="twitter:title" content="👾 Try the project | PyWordle Project Instructions" />
   
   
   
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>⚠️ Instructions Disclaimer</a></li>
 <li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i>📖 Glossary</a></li>
 <li class="chapter" data-level="" data-path="step-1-download-your-files.html"><a href="step-1-download-your-files.html"><i class="fa fa-check"></i>📌 Step 1: Download your files️</a></li>
-<li class="chapter" data-level="" data-path="the-project.html"><a href="the-project.html"><i class="fa fa-check"></i>👾 The Project</a></li>
+<li class="chapter" data-level="" data-path="try-the-project.html"><a href="try-the-project.html"><i class="fa fa-check"></i>👾 Try the project</a></li>
 <li class="chapter" data-level="" data-path="step-2-import-modules.html"><a href="step-2-import-modules.html"><i class="fa fa-check"></i>📌 Step 2: <code>Import</code> modules</a></li>
 <li class="chapter" data-level="" data-path="step-3-define-get_started-function.html"><a href="step-3-define-get_started-function.html"><i class="fa fa-check"></i>📌 Step 3: Define <code>get_started</code> function</a></li>
 <li class="chapter" data-level="" data-path="step-4-define-list_of_words-function.html"><a href="step-4-define-list_of_words-function.html"><i class="fa fa-check"></i>📌 Step 4: Define <code>list_of_words</code> function</a></li>
@@ -166,8 +166,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="the-project" class="section level1 hasAnchor">
-<h1>👾 The Project<a href="#the-project" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="try-the-project" class="section level1 hasAnchor">
+<h1>👾 Try the project<a href="#try-the-project" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <!-- CodeMirror CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/theme/eclipse.css">
@@ -202,7 +202,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 
   #editor-wrapper {
-    width: 400px;
+    width: 300px;
   }
 
   .right-panel { 
@@ -214,7 +214,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   label { font-weight: bold; margin-bottom: 5px; display: block; }
 
   #user_input, #output { 
-    width: 400px; 
+    width: 500px; 
     padding: 10px; 
     margin-bottom: 10px; 
     border: 1px solid #ccc; 
@@ -231,7 +231,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 
   #enter-btn {
-    width: 400px;
+    width: 100px;
     margin-bottom: 10px;
   }
 
@@ -243,18 +243,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 </style>
 
-<div id="run-container">
-  <button id="run" style="font-size: 15px;">▶ Run Code</button>
-</div>
 
 <div class="container">
   <div id="editor-wrapper">
     <textarea id="editor">
-# PyWordle runner
-# The game code is stored securely on the server.
-# Click "Run Code" to try the project.  
-# Experiment with different inputs to better understand how it works.
+# -- PyWordle runner -- #
+# Code is hidden.
+# Click "Run Code" to try out the project.
+# Observe the output before entering your input.
+# Experiment with different inputs to gain a better understanding of how it works.
     </textarea>
+    
+  <div id="run-container">
+    <button id="run" style="font-size: 15px; margin-top:8px">▶ Run Code</button>
+  </div>
   </div>
 
   <div class="right-panel">
@@ -313,7 +315,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   const enterBtn = document.getElementById("enter-btn");
 
   const socket = io(BACKEND_URL, {
-    transports: ["websocket", "polling"]
+    transports: ["websocket"]
   });
 
   socket.on("connect", () => {
