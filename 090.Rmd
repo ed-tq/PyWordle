@@ -1,17 +1,5 @@
 #  📌 Step 10: Define and call `main` function  
 
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-
-<script>
-window.addEventListener("load", function () {
-  confetti({
-    particleCount: 200,
-    spread: 100,
-    origin: { y: 0.6 }
-  });
-});
-</script>
-
 This function runs the game.
 
 1.  This functions should call the appropriate function that returns the file name.
@@ -24,8 +12,8 @@ Now we can call the function to run the game 🎉
 <details>
 <summary>💡 Hint</summary>
 
-- By now you should be able to understand what each function does, how each function works, and how to call them. Look at your code so far or refer to glossary for help.
-- You can also run the project code on a different .py file to see how the project should run.
+- By now, you should understand what each function does, how it works, and how to call it. Review your code so far or refer to the glossary if you need help.  
+- You can also run the 👾 project code to see how the program is expected to behave.
 </details>
 </div>
 
