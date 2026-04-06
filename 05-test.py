@@ -1,5 +1,5 @@
 try:
-    words = ["apple", "mango", "peach", "grape", "melon"]
+    words = ["apple", "mango", "guava", "lemon", "peach"]
 
     result = get_random_word(words)
     print(f"Returned: {result}")

@@ -169,22 +169,183 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="the-project" class="section level1 hasAnchor">
 <h1>👾 The Project<a href="#the-project" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ul>
-<li>Run this code in your script file to simulate how your project will look like.</li>
-<li>Try different scenarios to get a good understanding of how the project runs.</li>
-<li>Remember to delete before starting your project.</li>
+<li>Run the code to try the project.<br />
+</li>
+<li>Experiment with different inputs to better understand how it works.</li>
 </ul>
-<div style="background: #F3E5F5; padding:15px; border-left:5px solid #9c27b0; margin:20px 0; overflow: auto; max-height: 200px">
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="the-project.html#cb1-1" tabindex="-1"></a><span class="im">import</span> urllib.request</span>
-<span id="cb1-2"><a href="the-project.html#cb1-2" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="the-project.html#cb1-3" tabindex="-1"></a>url <span class="op">=</span> <span class="st">&quot;https://pywordle-462265725713.australia-southeast1.run.app/get_game&quot;</span></span>
-<span id="cb1-4"><a href="the-project.html#cb1-4" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="the-project.html#cb1-5" tabindex="-1"></a><span class="cf">try</span>:</span>
-<span id="cb1-6"><a href="the-project.html#cb1-6" tabindex="-1"></a>    <span class="cf">with</span> urllib.request.urlopen(url) <span class="im">as</span> response:</span>
-<span id="cb1-7"><a href="the-project.html#cb1-7" tabindex="-1"></a>        code <span class="op">=</span> response.read().decode()</span>
-<span id="cb1-8"><a href="the-project.html#cb1-8" tabindex="-1"></a>    <span class="bu">exec</span>(code)</span>
-<span id="cb1-9"><a href="the-project.html#cb1-9" tabindex="-1"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
-<span id="cb1-10"><a href="the-project.html#cb1-10" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Failed to fetch:&quot;</span>, e)</span></code></pre></div>
+<!-- CodeMirror CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/theme/eclipse.css">
+
+<!-- CodeMirror JS -->
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/python/python.js"></script>
+
+  <style>
+    h2 { margin-bottom: 10px; }
+
+    #run-container { margin-bottom: 10px; }
+
+    button { 
+      padding: 10px 15px; 
+      background: #43a047; 
+      color: white; 
+      border: none; 
+      border-radius: 5px; 
+      cursor: pointer; 
+      height: 40px;
+    }
+
+    button:hover { background: #388e3c; }
+
+    .container { 
+      display: flex; 
+      gap: 20px; 
+    }
+
+    /* Narrow code editor on left */
+    #editor-wrapper {
+      width: 400px; /* fixed narrow width */
+    }
+
+    /* Wider input/output panel on right */
+    .right-panel { 
+      flex: 1; 
+      display: flex; 
+      flex-direction: column; 
+    }
+
+    label { font-weight: bold; margin-bottom: 5px; display: block; }
+
+    #user_input, #output { 
+      width: 400px; 
+      padding: 10px; 
+      margin-bottom: 10px; 
+      border: 1px solid #ccc; 
+      border-radius: 4px; 
+      box-sizing: border-box; 
+    }
+
+    #user_input { 
+      overflow: auto; 
+      height: 40px;  
+      overflow: hidden;
+      resize: none; 
+    }
+
+    #output { 
+      height: 185px; 
+      overflow: auto; 
+      background: #f7f7f7; 
+      white-space: pre-wrap; 
+    }
+  </style>
+
+<div id="run-container">
+  <button id="run" style="font-size: 15px;">▶ Run Code</button>
 </div>
+
+<div class="container">
+  <div id="editor-wrapper">
+    <textarea id="editor">
+    
+url = "HIDDEN_URL"
+
+try:
+    import urllib.request
+    with urllib.request.urlopen(url) as response:
+        code = response.read().decode()
+except Exception as e:
+    print("Failed to fetch:", e)
+    </textarea>
+  </div>
+
+  <div class="right-panel">
+    <label for="user_input">Input:</label>
+    <textarea id="user_input" placeholder="Enter any input here"></textarea>
+
+    <label for="output">Output:</label>
+    <pre id="output"></pre>
+  </div>
+</div>
+
+<script>
+  // Inject additional CodeMirror styles
+  const style = document.createElement("style");
+  style.textContent = `
+    .CodeMirror {
+      width: 100%;
+      height: 500px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      font-size: 14px;
+      font-family: monospace;
+      background: #ffffff;
+      line-height: 1.2 !important;
+    }
+
+    .CodeMirror pre {
+      white-space: pre-wrap !important;
+      word-break: break-word !important;
+      margin: 0 !important;
+      padding: 0 4px !important;
+      position: relative;
+      z-index: 2;
+      background: transparent !important;
+    }
+
+    .CodeMirror-lines { padding: 4px 0 !important; position: relative; }
+    .CodeMirror-cursor { height: 1.2em !important; }
+    .CodeMirror-gutters { z-index: 3; }
+  `;
+  document.head.appendChild(style);
+
+  // Initialize CodeMirror
+  const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+    lineNumbers: true,
+    mode: "python",
+    theme: "eclipse",
+    indentUnit: 4,
+    readOnly: "nocursor"
+  });
+
+  const outputEl = document.getElementById("output");
+  const inputEl = document.getElementById("user_input");
+
+  document.getElementById("run").onclick = async () => {
+  outputEl.textContent = "Running...\n";
+
+  // Get the code from the editor
+  let codeToRun = editor.getValue();
+
+  // Replace placeholder with actual URL
+  codeToRun = codeToRun.replace(
+    'HIDDEN_URL',
+    'https://pywordle-462265725713.australia-southeast1.run.app/get_game'
+  );
+
+  const userInput = inputEl.value;
+
+  try {
+    const response = await fetch(
+      "https://pywordle-462265725713.australia-southeast1.run.app/run_game",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          student_code: codeToRun,
+          user_input: userInput
+        })
+      }
+    );
+
+    const data = await response.json();
+    outputEl.textContent = data.output;
+  } catch (e) {
+    outputEl.textContent = "Error running code: " + e;
+  }
+};
+</script>
 
 </div>
             </section>

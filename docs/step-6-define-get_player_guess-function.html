@@ -246,13 +246,13 @@ Note: when you open a file you need to make sure to close it.</li>
 <summary>
 ⭐
 </summary>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="step-6-define-get_player_guess-function.html#cb7-1" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;cherry&quot;</span>, <span class="st">&quot;kiwi&quot;</span>, <span class="st">&quot;mango&quot;</span>]</span>
-<span id="cb7-2"><a href="step-6-define-get_player_guess-function.html#cb7-2" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="step-6-define-get_player_guess-function.html#cb7-3" tabindex="-1"></a>upper_fruits <span class="op">=</span> []</span>
-<span id="cb7-4"><a href="step-6-define-get_player_guess-function.html#cb7-4" tabindex="-1"></a><span class="cf">for</span> f <span class="kw">in</span> fruits:</span>
-<span id="cb7-5"><a href="step-6-define-get_player_guess-function.html#cb7-5" tabindex="-1"></a>    upper_fruits.append(f.upper())</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="step-6-define-get_player_guess-function.html#cb2-1" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;cherry&quot;</span>, <span class="st">&quot;kiwi&quot;</span>, <span class="st">&quot;mango&quot;</span>]</span>
+<span id="cb2-2"><a href="step-6-define-get_player_guess-function.html#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="step-6-define-get_player_guess-function.html#cb2-3" tabindex="-1"></a>upper_fruits <span class="op">=</span> []</span>
+<span id="cb2-4"><a href="step-6-define-get_player_guess-function.html#cb2-4" tabindex="-1"></a><span class="cf">for</span> f <span class="kw">in</span> fruits:</span>
+<span id="cb2-5"><a href="step-6-define-get_player_guess-function.html#cb2-5" tabindex="-1"></a>    upper_fruits.append(f.upper())</span></code></pre></div>
 <p>is the same as:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="step-6-define-get_player_guess-function.html#cb8-1" tabindex="-1"></a>upper_fruits <span class="op">=</span> [f.upper() <span class="cf">for</span> f <span class="kw">in</span> fruits]</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="step-6-define-get_player_guess-function.html#cb3-1" tabindex="-1"></a>upper_fruits <span class="op">=</span> [f.upper() <span class="cf">for</span> f <span class="kw">in</span> fruits]</span></code></pre></div>
 </details>
 </div>
 </details>
@@ -271,11 +271,11 @@ Note: when you open a file you need to make sure to close it.</li>
 <summary>
 📝 Test Code
 </summary>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="step-6-define-get_player_guess-function.html#cb9-1" tabindex="-1"></a><span class="im">import</span> urllib.request</span>
-<span id="cb9-2"><a href="step-6-define-get_player_guess-function.html#cb9-2" tabindex="-1"></a>url <span class="op">=</span> <span class="st">&quot;https://raw.githubusercontent.com/ed-tq/PyWordle/refs/heads/main/06-test.py&quot;</span></span>
-<span id="cb9-3"><a href="step-6-define-get_player_guess-function.html#cb9-3" tabindex="-1"></a><span class="cf">with</span> urllib.request.urlopen(url) <span class="im">as</span> response:</span>
-<span id="cb9-4"><a href="step-6-define-get_player_guess-function.html#cb9-4" tabindex="-1"></a>    code <span class="op">=</span> response.read().decode(<span class="st">&quot;utf-8&quot;</span>)</span>
-<span id="cb9-5"><a href="step-6-define-get_player_guess-function.html#cb9-5" tabindex="-1"></a><span class="bu">exec</span>(code)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="step-6-define-get_player_guess-function.html#cb4-1" tabindex="-1"></a><span class="im">import</span> urllib.request</span>
+<span id="cb4-2"><a href="step-6-define-get_player_guess-function.html#cb4-2" tabindex="-1"></a>url <span class="op">=</span> <span class="st">&quot;https://raw.githubusercontent.com/ed-tq/PyWordle/refs/heads/main/06-test.py&quot;</span></span>
+<span id="cb4-3"><a href="step-6-define-get_player_guess-function.html#cb4-3" tabindex="-1"></a><span class="cf">with</span> urllib.request.urlopen(url) <span class="im">as</span> response:</span>
+<span id="cb4-4"><a href="step-6-define-get_player_guess-function.html#cb4-4" tabindex="-1"></a>    code <span class="op">=</span> response.read().decode(<span class="st">&quot;utf-8&quot;</span>)</span>
+<span id="cb4-5"><a href="step-6-define-get_player_guess-function.html#cb4-5" tabindex="-1"></a><span class="bu">exec</span>(code)</span></code></pre></div>
 </details>
 </div>
 
