@@ -24,8 +24,9 @@ Now we can call the function to run the game 🎉
 <div style="max-width: 700px; margin: 20px auto; padding: 20px;
             background: #f9f9f9; border: 2px solid #ccc; border-radius: 5px;
             box-shadow: 2px 2px 10px rgba(0,0,0,0.1); font-family: Arial, sans-serif;">
-  <h4 style="margin-top:5px; margin-bottom:5px"">Define and call <b>main</b> function</h4>
+  <h4 style="margin-top:5px; margin-bottom:5px"">Define <b>main</b> function</h4>
   <p>Type or paste your code and run.<p>
+  <p>Note: You do not call your main function here, only define it. But make sure to call it in your <code>script.py</code> file.<p>
 
   <div id="codeeditor"></div>
 

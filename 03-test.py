@@ -4,6 +4,7 @@ import sys
 
 score = 0
 total = 2
+error = None
 
 original_stdout = sys.stdout
 original_input = builtins.input
@@ -36,7 +37,7 @@ finally:
     sys.stdout = original_stdout
     builtins.input = original_input
 
-if 'error' in locals():
+if error is not None:
     if isinstance(error, NameError):
         print("❌ Test 1: Function 'get_started' not defined")
         print("❌ Test 2: Return value could not be checked")

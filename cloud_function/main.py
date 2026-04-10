@@ -179,7 +179,7 @@ def safe_open(filename, mode="r", *args, **kwargs):
 def build_safe_builtins() -> dict[str, Any]:
     return {
         "print": print,
-        "input": builtins.input,
+        "input": lambda *args, **kwargs: builtins.input(*args, **kwargs),
         "len": len,
         "range": range,
         "str": str,
@@ -200,7 +200,7 @@ def build_safe_builtins() -> dict[str, Any]:
         "sorted": sorted,
         "any": any,
         "all": all,
-        "open": safe_open,
+        "open": lambda *args, **kwargs: safe_open(*args, **kwargs),
         "__import__": guarded_import,
     }
 
