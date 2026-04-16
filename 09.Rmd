@@ -23,9 +23,10 @@ This fucntions runs the full game of 1 or more rounds and shows summary.
 10. Function should end after printing the summary
 
 
-<div style="background:#f0f8ff; padding:15px; border-left:5px solid #2c7be5; margin:20px 0;">
+<div class="hint-block">
 <details>
 <summary>💡 Hint</summary>
+<p style="margin-top:10px; margin-left:15px;"></p>
 
 - First open the file and read the words into a list.
     - You can use `.split()`
@@ -87,14 +88,12 @@ This fucntions runs the full game of 1 or more rounds and shows summary.
 </div>
 
 ```{=html}
-<div style="background: #cccccc26; padding:15px; border-left:5px solid #ccc; margin:20px 0;">
+<div class="check-block">
 <details open>
 <summary>✅ Checker</summary>
-<div style="max-width: 700px; margin: 20px auto; padding: 20px;
-            background: #f9f9f9; border: 2px solid #ccc; border-radius: 5px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.1); font-family: Arial, sans-serif;">
-  <h4 style="margin-top:5px; margin-bottom:5px"">Define <b>play_game</b> function</h4>
-  <p>Type or paste your code and run.<p>
+<div style="margin: 20px auto; margin-bottom: 0; margin-top: 0; padding: 20px;">
+  <h4 style="margin-top:5px; margin-bottom:5px;">Define <b>play_game</b> function</h4>
+  <p style="font-size:15px;">Type or paste your code and run.<p>
 
   <div id="codeeditor"></div>
 

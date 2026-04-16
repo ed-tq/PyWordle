@@ -2,22 +2,23 @@
 
 Import the random module so we can use it to get random words from our `words.txt` file.  
 
-<div style="background:#f0f8ff; padding:15px; border-left:5px solid #2c7be5; margin:20px 0;">
+<div class="hint-block">
 <details>
 <summary>💡 Hint</summary>
-To use all functions from a module: `import moduleName`
+<p style="margin-top:10px; margin-left:15px;">
+To use all functions from a module: <code>import moduleName</code>
+</p>
 </details>
 </div>
 
 ```{=html}
-<div style="background: #cccccc26; padding:15px; border-left:5px solid #ccc; margin:20px 0;">
+<div class="check-block">
 <details open>
 <summary>✅ Checker</summary>
-<div style="max-width: 700px; margin: 20px auto; padding: 20px;
-            background: #f9f9f9; border: 2px solid #ccc; border-radius: 5px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.1); font-family: Arial, sans-serif;">
-  <h4 style="margin-top:5px; margin-bottom:5px""> <b>Import</b> module</h4>
-  <p>Type or paste your code and run.<p>
+<div style="margin: 20px auto; margin-bottom: 0; margin-top: 0; padding: 20px;">
+  <h4 style="margin-top:5px; margin-bottom:5px;"> <b>Import</b> module</h4>
+  <p style="font-size:15px;">Type or paste your code and run.<p>
+  <p style="font-size:15px;"><b>Note:</b> Make sure to save your code in your <code>script.py</code> file.</p>
 
   <div id="codeeditor"></div>
 
