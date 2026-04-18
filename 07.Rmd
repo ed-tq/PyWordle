@@ -29,16 +29,13 @@ This functions stimulates one round of the game.
 - You can call `get_player_guess()` inside the loop to get each guess.
 - Use `range(len(word))` to loop through each position in the word.
 
-<div style="margin-left:20px;">
+<div style="margin-left:20px;margin-bottom:15px;">
 <details>
 <summary>ℹ️</summary>
 
 - If `guess[i] == word[i]`, the letter is correct and in the correct position.
 - If `guess[i] in word`, the letter is in the word but in the wrong position.
 - Otherwise, display `_`.
-
-</details>
-</div>
 
 <div style="margin-left:20px;">
 <details>
@@ -60,6 +57,9 @@ for i in range(len(word)):
 ```
 </details>
 </div>
+</details>
+</div>
+
 </details>
 </div>
 </details>

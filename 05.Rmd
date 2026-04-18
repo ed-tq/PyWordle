@@ -10,14 +10,14 @@
 <details>
 <summary>💡 Hint</summary>
 <p style="margin-top:10px; margin-left:15px;"></p>
--  Use `randrange()` or `randint()` from the `random` module to get random position/number. Store this number in a variable.
+-  Use `randrange(...)` or `randint(...)` from the `random` module to get random position/number. Store this number in a variable.
+-   To To call a function from a module: `moduleName.functionName(...)`
     <details>
     <summary>ℹ️ More Information</summary>
     -  `.randrange(start, stop)` or `.randrange(stop)` generates a number from start or 0 (default) to stop - 1 (start number inclusive, stop number not inclusive).  
     -  `.randint(a, b)` generates a number from a to b (both numbers inclusive).  
       -  Use `len(words)` to get the total number on items in the list `words`.  
       -  Make sure the index number exists in the `words` list (index starts at 0 to `len(words)-1`).
-
 -  To return a word from the list of words, think about indexing/how to access an item from a list.  
         <details>
         <summary>⭐ Example</summary>  
@@ -86,7 +86,8 @@ window.addEventListener("load", function () {
     }
 
     editor = CodeMirror(el, {
-      value: `#Your code here\n`,
+      value: `import random
+#Your code here\n`,
       mode: "text/x-python",
       theme: "eclipse",
       lineNumbers: true,

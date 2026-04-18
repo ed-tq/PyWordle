@@ -4,7 +4,7 @@
 1.  This function opens the file `words.txt` and reads all the words into a list, where each word is stripped of whitespace and converted to lowercase.  
 2. The function then repeatedly prompts the user to enter a guess using a `while True` loop. The user input should also be converted to lowercase.    
 <details>
-    <summary>ℹ️</summary>  
+    <summary>📝 Note</summary>  
     - The words from the file and the user’s input are converted to lowercase to ensure consistency when comparing values during validation. 
     - This prevents mismatches (e.g., "HEllo" vs "hello"), allowing valid words to be recognised regardless of how the user types them.
 </details>  

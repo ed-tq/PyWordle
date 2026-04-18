@@ -184,7 +184,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p style="margin-top:10px; margin-left:15px;">
 </p>
 <ul>
-<li>Use <code>randrange()</code> or <code>randint()</code> from the <code>random</code> module to get random position/number. Store this number in a variable.
+<li>Use <code>randrange(...)</code> or <code>randint(...)</code> from the <code>random</code> module to get random position/number. Store this number in a variable.</li>
+<li>To To call a function from a module: <code>moduleName.functionName(...)</code>
 <details>
 <summary>
 ℹ️ More Information
@@ -271,7 +272,8 @@ window.addEventListener("load", function () {
     }
 
     editor = CodeMirror(el, {
-      value: `#Your code here\n`,
+      value: `import random
+#Your code here\n`,
       mode: "text/x-python",
       theme: "eclipse",
       lineNumbers: true,
