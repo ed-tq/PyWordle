@@ -43,7 +43,7 @@ else:
         print("✔ Test 1: Output matches expected output")
         score += 1
     else:
-        print("❌ Test 1: Output does not match expected output\n")
+        print("❌ Test 1: Output does not match expected output")
         actual_lines = output.strip().splitlines()
         expected_lines = expected_output.strip().splitlines()
         max_lines = max(len(actual_lines), len(expected_lines))
