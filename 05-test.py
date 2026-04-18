@@ -10,7 +10,8 @@ try:
         print(f"Returned: {result}\n")
         score += 1
     else:
-        print(f"❌ Test 1: '{result}' is not in the list")
+        print(f"❌ Test 1: Returned value is not in the list")
+        print(f"Returned: {result}\n")
 except Exception as e:
     print(f"❌ Test 1: {type(e).__name__} - {e}")
 
@@ -27,10 +28,9 @@ try:
         score += 1
     else:
         print("❌ Test 2: Only one word returned in 50 tries (not random)")
-        print("Showing 5 of 50 returns:")
-        for word in all_results[:5]:
-            print(f"Returned: {word}")
-        
+    print("Showing 5 of 50 returns:")
+    for word in all_results[:5]:
+        print(f"Returned: {word}")
 except Exception as e:
     print(f"❌ Test 2: {type(e).__name__} - {e}")
 
