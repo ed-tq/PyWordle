@@ -25,9 +25,12 @@ This function runs the full game of 1 or more rounds and shows summary.
 </div>
 
 <div class="hint-block">
+
 <details>
 <summary>💡 Hint</summary>
+
 <div style="padding-top:15px; padding-left:10px; padding-right:40px; padding-bottom:10px;">
+
 - The dictionary counts how many wins happened in 1 guess, 2 guesses, and so on (up to 6).
 - Use a `while True:` loop so the game keeps running until the player chooses to stop.
 - At the start of each round, increase the round number by 1.
@@ -35,6 +38,7 @@ This function runs the full game of 1 or more rounds and shows summary.
   - You need to consider what arguments it takes when calling and how to use its return value in your code.
   
 <div style="margin-left:60px;margin-top:-14px;">
+
 <details>
 <summary>ℹ️</summary>
 
@@ -43,7 +47,8 @@ This function runs the full game of 1 or more rounds and shows summary.
   - the chosen word
   - You can use indexing to access them.
 
-<div style="margin-left:40px;margin-top:-14px;">
+<div style="margin-left:60px;margin-top:-14px;">
+
 <details>
 <summary>⭐</summary>
 
@@ -51,9 +56,11 @@ This function runs the full game of 1 or more rounds and shows summary.
       word = game[1]
 
 </details>
+
 </div>
 
 </details>
+
 </div>
 
 - If the round was won update:
@@ -63,15 +70,23 @@ This function runs the full game of 1 or more rounds and shows summary.
 - The win percentage can be calculated using: `percentage = round((number_of_wins / number_of_games) * 100)`
 - The win distribution displays the number of wins across the number of guesses 1-6:
   - if the number of wins is 0, print the number
-  - otherwise print `#` repeated by number of wins for each number of guesses, followed by count
-  <details>
-  <summary>⭐</summary>
+  - otherwise print `#` repeated by number of wins for the number of guesses, followed by the number
+
+<div style="margin-left:60px;margin-top:-14px;padding-bottom:10px;">
+
+<details>
+<summary>⭐</summary>
   
-      `'#' * (num_repeats)`
+  `'#' * (num_repeats)`
   
-  </details>
-</div>
 </details>
+
+</div> 
+
+</div>
+
+</details>
+
 </div>
 
 
@@ -79,7 +94,7 @@ This function runs the full game of 1 or more rounds and shows summary.
 ```{=html}
 <div class="check-block">
 <details open>
-<summary>✅ Checker</summary>
+<summary>✅ Code Runner</summary>
 <div style="margin: 20px auto; margin-bottom: 0; margin-top: 0; padding: 20px;">
   <h4 style="margin-top:5px; margin-bottom:5px;">Define <b>play_game</b> function</h4>
   <p style="font-size:15px;">Type or paste your code and run.<p>
@@ -91,7 +106,7 @@ This function runs the full game of 1 or more rounds and shows summary.
           style="padding: 10px 15px; font-size: 15px; color: #fff;
                  background-color: #2c7be5; border: none; border-radius: 5px; margin-top: 15px;
                  cursor: pointer;">
-    ▶  Run
+    &#9654; Run
   </button>
 
   <pre id="output" style="margin-top:15px; padding:10px; border-radius:5px;"></pre>

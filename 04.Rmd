@@ -27,7 +27,7 @@ Use list method <a href="https://www.w3schools.com/python/ref_list_append.asp" t
 ```{=html}
 <div class="check-block">
 <details open>
-<summary>✅ Checker</summary>
+<summary>✅ Code Runner</summary>
 <div style="margin: 20px auto; margin-bottom: 0; margin-top: 0; padding: 20px;">
   <h4 style="margin-top:5px; margin-bottom:5px;">Define <b>list_of_words</b> function</h4>
   <p style="font-size:15px;">Type or paste your code and run.<p>
@@ -39,7 +39,7 @@ Use list method <a href="https://www.w3schools.com/python/ref_list_append.asp" t
           style="padding: 10px 15px; font-size: 15px; color: #fff;
                  background-color: #2c7be5; border: none; border-radius: 5px; margin-top: 15px;
                  cursor: pointer;">
-    ▶  Run
+    &#9654; Run
   </button>
 
   <pre id="output" style="margin-top:15px; padding:10px; border-radius:5px;"></pre>

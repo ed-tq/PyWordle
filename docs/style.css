@@ -23,8 +23,8 @@
 
 .hint-block > details > summary::-webkit-details-marker { display: none; }
 .hint-block > details > summary::before {
-  content: "▶";
-  font-size: 11px;
+  content: "\25B6";
+  font-size: 14px;
   transition: transform 0.2s;
   display: inline-block;
 }
@@ -66,8 +66,8 @@
 
 .hint-block > details > .details-body details > summary::-webkit-details-marker { display: none; }
 .hint-block > details > .details-body details > summary::before {
-  content: "▶";
-  font-size: 10px;
+  content: "\25B6";
+  font-size: 14px;
   color: #fff;
   transition: transform 0.2s;
 }
@@ -106,8 +106,8 @@
 }
 .check-block summary::-webkit-details-marker { display: none; }
 .check-block summary::before {
-  content: "▶";
-  font-size: 11px;
+  content: "\25B6";
+  font-size: 14px;
   transition: transform 0.2s;
   display: inline-block;
 }

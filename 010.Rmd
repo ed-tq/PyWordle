@@ -80,7 +80,8 @@
 <div class="container">
   <div id="editor-wrapper">
     <textarea id="editor">
-# -- PyWordle runner -- #
+# PyWordle runner
+#
 # Code is hidden.
 #
 # Click "Run Code" to try out the project.
@@ -89,7 +90,7 @@
 #
 # You can only type when the status shows [Connected] and "Run Code" is active.
 #
-# Valid inputs are limited to:
+# Valid guesses are limited to:
 # ["apple", "mango", "guava", "peach", "berry",
 #  "lemon", "grape", "melon", "olive"]
 #
@@ -97,7 +98,7 @@
     </textarea>
     
   <div id="run-container">
-    <button id="run" style="font-size: 15px; margin-top:8px">▶ Run Code</button>
+    <button id="run" style="font-size: 15px; margin-top:8px">&#9654; Run Code</button>
   </div>
   </div>
 
