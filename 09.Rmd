@@ -1,4 +1,4 @@
-#  📌 Step 9: Define `play_game` function  
+#  <img src="key9.svg" style="width:1.3em; height:1.3em; vertical-align:middle"/> Step 9: Define `play_game` function  
 
 <div class="instructions">
 This function runs the full game of 1 or more rounds and shows summary.

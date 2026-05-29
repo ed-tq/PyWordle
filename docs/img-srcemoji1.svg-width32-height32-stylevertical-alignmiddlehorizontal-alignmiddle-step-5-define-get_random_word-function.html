@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>&lt;img src=“emoji1.svg” width=“32” height=“32” style=“vertical-align:middle;”horizontal-align:middle”“/&gt; Step 5: Define get_random_word function | PyWordle Project Instructions</title>
+  <meta name="description" content="&lt;img src=“emoji1.svg” width=“32” height=“32” style=“vertical-align:middle;”horizontal-align:middle”“/&gt; Step 5: Define get_random_word function | PyWordle Project Instructions" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="&lt;img src=“emoji1.svg” width=“32” height=“32” style=“vertical-align:middle;”horizontal-align:middle”“/&gt; Step 5: Define get_random_word function | PyWordle Project Instructions" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="&lt;img src=“emoji1.svg” width=“32” height=“32” style=“vertical-align:middle;”horizontal-align:middle”“/&gt; Step 5: Define get_random_word function | PyWordle Project Instructions" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="step-4-define-list_of_words-function.html"/>
+<link rel="next" href="step-6-define-get_player_guess-function.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link rel="icon" type="image/png" href="pywordlefavicon3.png">
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>⚠️ Important Information</a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i>📖 Glossary</a></li>
+<li class="chapter" data-level="" data-path="try-the-project.html"><a href="try-the-project.html"><i class="fa fa-check"></i>👾 Try the project</a></li>
+<li class="chapter" data-level="" data-path="step-1-download-your-files.html"><a href="step-1-download-your-files.html"><i class="fa fa-check"></i>📌 Step 1: Download your files️</a></li>
+<li class="chapter" data-level="" data-path="step-2-import-modules.html"><a href="step-2-import-modules.html"><i class="fa fa-check"></i>📌 Step 2: <code>Import</code> modules</a></li>
+<li class="chapter" data-level="" data-path="step-3-define-get_started-function.html"><a href="step-3-define-get_started-function.html"><i class="fa fa-check"></i>📌 Step 3: Define <code>get_started</code> function</a></li>
+<li class="chapter" data-level="" data-path="step-4-define-list_of_words-function.html"><a href="step-4-define-list_of_words-function.html"><i class="fa fa-check"></i>📌 Step 4: Define <code>list_of_words</code> function</a></li>
+<li class="chapter" data-level="" data-path="img-srcemoji1.svg-width32-height32-stylevertical-alignmiddlehorizontal-alignmiddle-step-5-define-get_random_word-function.html"><a href="img-srcemoji1.svg-width32-height32-stylevertical-alignmiddlehorizontal-alignmiddle-step-5-define-get_random_word-function.html"><i class="fa fa-check"></i>&lt;img src=“emoji1.svg” width=“32” height=“32” style=“vertical-align:middle;”horizontal-align:middle”“/&gt; Step 5: Define <code>get_random_word</code> function</a></li>
+<li class="chapter" data-level="" data-path="step-6-define-get_player_guess-function.html"><a href="step-6-define-get_player_guess-function.html"><i class="fa fa-check"></i>📌 Step 6: Define <code>get_player_guess</code> function</a></li>
+<li class="chapter" data-level="" data-path="step-7-define-play_round-function.html"><a href="step-7-define-play_round-function.html"><i class="fa fa-check"></i>📌 Step 7: Define <code>play_round</code> function</a></li>
+<li class="chapter" data-level="" data-path="step-8-define-play_more-function.html"><a href="step-8-define-play_more-function.html"><i class="fa fa-check"></i>📌 Step 8: Define <code>play_more</code> function</a></li>
+<li class="chapter" data-level="" data-path="step-9-define-play_game-function.html"><a href="step-9-define-play_game-function.html"><i class="fa fa-check"></i>📌 Step 9: Define <code>play_game</code> function</a></li>
+<li class="chapter" data-level="" data-path="step-10-define-and-call-main-function.html"><a href="step-10-define-and-call-main-function.html"><i class="fa fa-check"></i>📌 Step 10: Define and call <code>main</code> function</a></li>
+<li class="chapter" data-level="" data-path="quiz.html"><a href="quiz.html"><i class="fa fa-check"></i>🧠 Quiz</a></li>
+<li class="chapter" data-level="" data-path="feedback.html"><a href="feedback.html"><i class="fa fa-check"></i>📩 Feedback</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PyWordle Project Instructions</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="img-srcemoji1.svg-width32-height32-stylevertical-alignmiddlehorizontal-alignmiddle-step-5-define-get_random_word-function" class="section level1 hasAnchor">
+<h1>&lt;img src=“emoji1.svg” width=“32” height=“32” style=“vertical-align:middle;”horizontal-align:middle”“/&gt; Step 5: Define <code>get_random_word</code> function<a href="img-srcemoji1.svg-width32-height32-stylevertical-alignmiddlehorizontal-alignmiddle-step-5-define-get_random_word-function.html#img-srcemoji1.svg-width32-height32-stylevertical-alignmiddlehorizontal-alignmiddle-step-5-define-get_random_word-function" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="py-links">
+<a href="https://www.w3schools.com/python/python_lists_access.asp" target="_blank" class="py-link" style="text-decoration: none; background: #e8f2fb; color: #1a5a8a; border-radius: 4px; padding: 2px 8px; border: 1px solid #bcd9f0; font-family: Consolas, monospace; font-size: 0.78em;">List Indexing 🔗</a>
+<a href="https://www.w3schools.com/python/module_random.asp" target="_blank" class="py-link" style="text-decoration: none; background: #e8f2fb; color: #1a5a8a; border-radius: 4px; padding: 2px 8px; border: 1px solid #bcd9f0; font-family: Consolas, monospace; font-size: 0.78em;">Random Module 🔗</a>
+</div>
+<div class="instructions">
+<ol style="list-style-type: decimal">
+<li>This function takes a list <code>words</code> as an argument.</li>
+<li>The function picks a random position (index) in the list.</li>
+<li>Returns the word from the <code>words</code> list at that position.</li>
+</ol>
+</div>
+<div class="hint-block">
+<details>
+<summary>
+💡 Hint
+</summary>
+<div style="padding-top:15px; padding-left:10px; padding-right:40px; padding-bottom:10px;">
+<ul>
+<li>Use <code>randrange(...)</code> or <code>randint(...)</code> from the <code>random</code> module to generate a random number that can be used as an index when accessing an item in a list. Store this number in a variable.</li>
+</ul>
+<div style="margin-left:40px; margin-top:-14px;">
+<details>
+<summary>
+ℹ️ More Information
+</summary>
+<ul>
+<li><code>.randrange(start, stop)</code> or <code>.randrange(stop)</code> returns a random integer starting from <code>start</code> (or 0 by default) up to but not including <code>stop</code>.<br />
+</li>
+<li><code>.randint(a, b)</code> returns a random integer between <code>a</code> and <code>b</code>, including both values.</li>
+</ul>
+</details>
+</div>
+<ul>
+<li>Make sure the index is within the valid range of the <code>words</code> list. The valid index range is from <code>0</code> to <code>len(words) - 1</code>, where <code>len(words)</code> returns the number of items in the list <code>words</code>.</li>
+<li>To call a function from a module: <code>moduleName.functionName(...)</code></li>
+<li>To return a word from the list of words, think about how to access an item from a list.</li>
+</ul>
+<div style="margin-left:40px; margin-top:-14px; padding-bottom:10px;">
+<details>
+<summary>
+⭐ Example
+</summary>
+<ul>
+<li><code>word_list[index]</code> returns the item at the specified index in the list.</li>
+</ul>
+</details>
+</div>
+</div>
+</details>
+</div>
+<div class="check-block">
+<details open>
+<summary>✅ Code Runner</summary>
+<div style="margin: 20px auto; margin-bottom: 0; margin-top: 0; padding: 20px;">
+  <h4 style="margin-top:5px; margin-bottom:5px;">Define <b>get_random_word</b> function</h4>
+  <p style="font-size:15px;">Type or paste your code and run.<p>
+
+  <div id="codeeditor"></div>
+
+
+  <button onclick="check()"
+          style="padding: 10px 15px; font-size: 15px; color: #fff;
+                 background-color: #2c7be5; border: none; border-radius: 5px; margin-top: 15px;
+                 cursor: pointer;">
+    &#9654; Run
+  </button>
+
+  <pre id="output" style="margin-top:15px; padding:10px; border-radius:5px;"></pre>
+</div>
+</details>
+</div> 
+
+<script>
+window.addEventListener("load", function () {
+  let editor = null;
+  let testCode = "";
+
+  function addCSS(href) {
+    if (document.querySelector('link[href="' + href + '"]')) return;
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = href;
+    document.head.appendChild(link);
+  }
+
+  function addScript(src, callback) {
+    if (document.querySelector('script[src="' + src + '"]')) {
+      if (callback) callback();
+      return;
+    }
+    const script = document.createElement("script");
+    script.src = src;
+    script.onload = callback;
+    script.onerror = function () {
+      console.error("Failed to load script:", src);
+    };
+    document.head.appendChild(script);
+  }
+
+  function startEditor() {
+    const el = document.getElementById("codeeditor");
+    if (!el || el.dataset.cmInitialized === "true") return;
+
+    if (typeof CodeMirror === "undefined") {
+      console.error("CodeMirror is undefined");
+      return;
+    }
+
+    editor = CodeMirror(el, {
+      value: `import random
+#Your code here\n`,
+      mode: "text/x-python",
+      theme: "eclipse",
+      lineNumbers: true,
+      indentUnit: 4,
+      tabSize: 4,
+      indentWithTabs: false,
+      lineWrapping: true,
+      overwriteToggle: false,
+      extraKeys: {
+        Tab: function(cm) {
+          if (cm.somethingSelected()) {
+            cm.indentSelection("add");
+          } else {
+            cm.replaceSelection("    ", "end");
+          }
+        },
+        Backspace: function(cm) {
+          // If text is selected, delete selection normally
+          if (cm.somethingSelected()) {
+            cm.replaceSelection("");
+            return;
+          }
+        
+          const cursor = cm.getCursor();
+          const line = cm.getLine(cursor.line);
+          const before = line.slice(0, cursor.ch);
+        
+          // If cursor is in leading indentation, remove one indent level
+          if (/^\s+$/.test(before)) {
+            const spacesToRemove = before.length % 4 || 4;
+            cm.replaceRange(
+              "",
+              { line: cursor.line, ch: cursor.ch - spacesToRemove },
+              { line: cursor.line, ch: cursor.ch }
+            );
+          } else {
+            cm.execCommand("delCharBefore");
+          }
+        }
+      }
+    });
+
+    editor.setSize("100%", "200px");
+    el.dataset.cmInitialized = "true";
+  }
+
+  fetch("https://raw.githubusercontent.com/ed-tq/PyWordle/refs/heads/main/05-test.py")
+    .then(res => res.text())
+    .then(text => { testCode = text; })
+    .catch(err => console.error("Failed to load test code:", err));
+
+  addCSS("https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.css");
+  addCSS("https://cdn.jsdelivr.net/npm/codemirror@5.65.16/theme/eclipse.css");
+
+  const style = document.createElement("style");
+  style.textContent = `
+    .CodeMirror {
+      width: 100%;
+      height: 200px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      font-size: 15px;
+      font-family: monospace;
+      background: #ffffff;
+      line-height: 1.2 !important;
+    }
+    
+    .CodeMirror pre {
+      white-space: pre-wrap !important;
+      word-break: break-word !important;
+    }
+    
+    .CodeMirror pre {
+      white-space: pre-wrap !important;
+      word-break: break-word !important;
+    }
+  
+    .CodeMirror-scroll,
+    .CodeMirror-sizer,
+    .CodeMirror-lines,
+    .CodeMirror-code,
+    .CodeMirror-line,
+    .CodeMirror pre {
+      line-height: 1.2 !important;
+      font-size: 15px !important;
+      font-family: monospace !important;
+    }
+  
+    .CodeMirror pre {
+      margin: 0 !important;
+      padding: 0 4px !important;
+      position: relative;
+      z-index: 2;
+      background: transparent !important;
+    }
+  
+    .CodeMirror-linebackground {
+      z-index: 0 !important;
+    }
+  
+    .CodeMirror-lines {
+      padding: 4px 0 !important;
+      position: relative;
+    }
+  
+    .CodeMirror-cursor {
+      height: 1.2em !important;
+    }
+  
+    .CodeMirror-gutters {
+      z-index: 3;
+    }
+  `;
+  document.head.appendChild(style);
+
+  addScript("https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.js", function () {
+    addScript("https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/python/python.js", function () {
+      startEditor();
+    });
+  });
+
+  if (window.gitbook) {
+    window.gitbook.events.bind("page.change", function () {
+      setTimeout(startEditor, 200);
+    });
+  }
+
+  window.check = async function() {
+    const output = document.getElementById("output");
+    const code = editor ? editor.getValue() : "";
+    
+    // reset styling
+    output.style.display = "block";
+    output.style.background = "transparent";
+    output.style.borderLeft = "none";
+    output.textContent = "Running...";
+
+    try {
+      const res = await fetch(
+        "https://pywordle-run-student-code-462265725713.australia-southeast1.run.app",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            student_code: code,
+            test_code: testCode
+          })
+        }
+      );
+      
+      const data = await res.json();
+      console.log(data);
+      output.textContent = data.output;
+
+      // apply colour only if needed
+      if (data.output.includes("❌") || data.output.includes("Error")) {
+        output.style.background = "#fdecea";
+        output.style.borderLeft = "5px solid #e57373";
+      } else if (data.output.includes("✔")) {
+        output.style.background = "#e8f5e9";
+        output.style.borderLeft = "5px solid #66bb6a";
+      }
+    } catch (err) {
+      output.textContent = "Error: " + err;
+    }
+  };
+});
+</script>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="step-4-define-list_of_words-function.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="step-6-define-get_player_guess-function.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

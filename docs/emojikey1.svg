@@ -1,0 +1,38 @@
+<svg width="100%" viewBox="0 0 680 680" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Keycap 1 emoji</title>
+  <desc>Number 1 keycap emoji, blue rounded square with white 1</desc>
+
+  <!-- Black sticker outline -->
+  <rect x="40" y="40" width="600" height="600" rx="120" fill="black"/>
+
+  <!-- Dark blue bottom/right shadow -->
+  <rect x="55" y="65" width="570" height="560" rx="105" fill="#1d4ed8"/>
+
+  <!-- Light blue top/left highlight -->
+  <rect x="55" y="55" width="550" height="550" rx="100" fill="#60a5fa"/>
+
+  <!-- Main blue body (inset) -->
+  <rect x="80" y="80" width="510" height="510" rx="90" fill="#3b82f6"/>
+
+  <!-- White number 1 pixels -->
+<!-- Dark shadow offset (gives inset look) -->
+<rect x="280" y="224" width="50" height="40" fill="#1d4ed8"/>
+<rect x="324" y="180" width="40" height="50" fill="#1d4ed8"/>
+<rect x="324" y="224" width="40" height="40" fill="#1d4ed8"/>
+<rect x="324" y="264" width="40" height="40" fill="#1d4ed8"/>
+<rect x="324" y="304" width="40" height="40" fill="#1d4ed8"/>
+<rect x="324" y="344" width="40" height="40" fill="#1d4ed8"/>
+<rect x="324" y="384" width="40" height="40" fill="#1d4ed8"/>
+<rect x="320" y="424" width="44" height="40" fill="#1d4ed8"/>
+
+<!-- White number 1 pixels -->
+ <rect class="px" x="280" y="220" width="50" height="40" fill="white"/>
+  <rect class="px" x="320" y="180" width="40" height="50" fill="white"/>
+  <rect class="px" x="320" y="220" width="40" height="50" fill="white"/>
+  <rect class="px" x="320" y="260" width="40" height="50" fill="white"/>
+  <rect class="px" x="320" y="300" width="40" height="50" fill="white"/>
+  <rect class="px" x="320" y="340" width="40" height="50" fill="white"/>
+  <rect class="px" x="320" y="380" width="40" height="50" fill="white"/>
+  <rect class="px" x="320" y="420" width="40" height="40" fill="white"/>
+
+</svg>

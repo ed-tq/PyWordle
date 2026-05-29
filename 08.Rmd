@@ -1,4 +1,4 @@
-#  📌 Step 8: Define `play_more` function  
+#  <img src="key8.svg" style="width:1.3em; height:1.3em; vertical-align:middle"/> Step 8: Define `play_more` function  
 
 <div class="instructions">
 This function runs one round of the game.

@@ -1,4 +1,4 @@
-#  🧠 Quiz
+#  <img src="quizkey.svg" style="width:1.3em; height:1.3em; vertical-align:middle"/> Quiz
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 

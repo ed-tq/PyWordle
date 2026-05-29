@@ -1,4 +1,4 @@
-# 📌 Step 4: Define `list_of_words` function  
+#  <img src="key4.svg" style="width:1.3em; height:1.3em; vertical-align:middle"/> Step 4: Define `list_of_words` function  
 
 ```{=html}
 <div class="py-links">

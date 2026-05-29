@@ -1,4 +1,4 @@
-#  📌 Step 6: Define `get_player_guess` function 
+#  <img src="key6.svg" style="width:1.3em; height:1.3em; vertical-align:middle"/> Step 6: Define `get_player_guess` function 
 
 ```{=html}
 <div class="py-links">

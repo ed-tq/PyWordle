@@ -1,0 +1,52 @@
+<svg width="100%" viewBox="0 0 680 680" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Pixel keycap 2 emoji</title>
+  <desc>Pixel art style of the number 2 keycap emoji, blue square with white 2</desc>
+
+  <style>.px { shape-rendering: crispEdges; }</style>
+
+  <!-- Black sticker outline -->
+  <rect class="px" x="160" y="40"  width="360" height="40" fill="black"/>
+<rect class="px" x="120" y="80"  width="440" height="40" fill="black"/>
+<rect class="px" x="80"  y="120" width="520" height="40" fill="black"/>
+<rect class="px" x="40"  y="160" width="40"  height="360" fill="black"/>
+<rect class="px" x="600" y="160" width="40"  height="360" fill="black"/>
+<rect class="px" x="80"  y="520" width="520" height="40" fill="black"/>
+<rect class="px" x="120" y="560" width="440" height="40" fill="black"/>
+<rect class="px" x="160" y="600" width="360" height="40" fill="black"/>
+
+  <!-- Blue keycap body -->
+  <rect class="px" x="160" y="80"  width="360" height="40" fill="#3b82f6"/>
+  <rect class="px" x="120" y="120" width="440" height="40" fill="#3b82f6"/>
+  <rect class="px" x="80"  y="160" width="520" height="360" fill="#3b82f6"/>
+  <rect class="px" x="120" y="520" width="440" height="40" fill="#3b82f6"/>
+  <rect class="px" x="160" y="560" width="360" height="40" fill="#3b82f6"/>
+
+  <!-- Darker blue shade bottom/right for 3D keycap look -->
+  <rect class="px" x="80"  y="160" width="40" height="360" fill="#1d4ed8"/>
+  <rect class="px" x="160" y="560" width="360" height="40" fill="#1d4ed8"/>
+  <rect class="px" x="120" y="520" width="40" height="40" fill="#1d4ed8"/>
+
+  <!-- Lighter blue highlight top/left -->
+  <rect class="px" x="160" y="80"  width="360" height="40" fill="#60a5fa"/>
+  <rect class="px" x="520" y="120" width="40" height="40" fill="#60a5fa"/>
+  <rect class="px" x="560" y="160" width="40" height="360" fill="#60a5fa"/>
+
+  <rect class="px" x="520" y="120" width="40" height="40" fill="#83b9fa"/>
+  <rect class="px" x="520" y="520" width="40" height="40" fill="#60a5fa"/>
+  <rect class="px" x="120" y="120" width="40" height="40" fill="#1d4ed8"/>
+
+  <!-- White number 2 pixels -->
+  <rect class="px" x="240" y="220" width="40" height="40" fill="white"/>
+  <rect class="px" x="280" y="180" width="40" height="40" fill="white"/>
+  <rect class="px" x="320" y="180" width="40" height="40" fill="white"/>
+  <rect class="px" x="360" y="220" width="40" height="40" fill="white"/>
+  <rect class="px" x="360" y="260" width="40" height="40" fill="white"/>
+  <rect class="px" x="320" y="300" width="40" height="40" fill="white"/>
+  <rect class="px" x="280" y="340" width="40" height="40" fill="white"/>
+  <rect class="px" x="240" y="380" width="40" height="40" fill="white"/>
+  <rect class="px" x="240" y="420" width="40" height="40" fill="white"/>
+  <rect class="px" x="280" y="420" width="40" height="40" fill="white"/>
+  <rect class="px" x="320" y="420" width="40" height="40" fill="white"/>
+  <rect class="px" x="360" y="420" width="40" height="40" fill="white"/>
+
+</svg>

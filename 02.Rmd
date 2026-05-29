@@ -1,4 +1,4 @@
-# 📌 Step 2: `Import` modules
+#  <img src="key2.svg" style="width:1.3em; height:1.3em; vertical-align:middle"/> Step 2: `Import` modules
 
 ```{=html}
 <div class="py-links">

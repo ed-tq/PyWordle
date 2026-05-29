@@ -1,4 +1,4 @@
-#  📌 Step 3: Define `get_started` function
+#  <img src="key3.svg" style="width:1.3em; height:1.3em; vertical-align:middle"/> Step 3: Define `get_started` function
 
 ```{=html}
 <div class="py-links">

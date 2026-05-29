@@ -1,4 +1,4 @@
-#  📌 Step 10: Define and call `main` function  
+#  <img src="key10.svg" style="width:1.3em; height:1.3em; vertical-align:middle"/> Step 10: Define and call `main` function  
 
 <div class="instructions">
 This function runs the game.

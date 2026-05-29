@@ -1,4 +1,4 @@
-#  📌 Step 5: Define `get_random_word` function  
+#  <img src="key5.svg" style="width:1.3em; height:1.3em; vertical-align:middle"/> Step 5: Define `get_random_word` function  
 
 ```{=html}
 <div class="py-links">

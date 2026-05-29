@@ -1,4 +1,4 @@
-#  👾 Try the project
+#  <img src="tryprojectkey.svg" style="width:1.3em; height:1.3em; vertical-align:middle"/> Try the project
 
 ```{=html}
 <!-- CodeMirror CSS -->
