@@ -1,27 +1,58 @@
+import builtins
 import io
 import sys
 
-score = 0
-total = 3
+def play_round(word):
+    guesses = 1
+    while guesses <= 6:
+        guess = get_player_guess()
+        display = ""
+        for i in range(len(word)):
+            if guess[i] == word[i]:
+                display += guess[i].upper() + ' '
+            elif guess[i] in word:
+                display += guess[i].lower() + ' '
+            else:
+                display += "_ "
+        print(display)
+        print()
+        if guess.lower() == word.lower():
+            return (guesses, True)
+        if guesses == 6:
+            return (guesses, False)
+        guesses += 1
+
+def compute_display(guess, word):
+    display = ""
+    for i in range(len(word)):
+        if guess[i] == word[i]:
+            display += guess[i].upper() + ' '
+        elif guess[i] in word:
+            display += guess[i].lower() + ' '
+        else:
+            display += "_ "
+    return display.strip()
+
+def build_expected_output(word, inputs):
+    lines = []
+    for guess_num, guess in enumerate(inputs, start=1):
+        lines.append(f"Guess {guess_num}:")
+        lines.append(compute_display(guess, word))
+    return "\n".join(lines)
 
 def test_play_round():
-    global score
-
     test_cases = [
         {
-            "name": "correct on first guess",
             "word": "apple",
             "inputs": ["apple"],
             "expected_return": (1, True),
         },
         {
-            "name": "incorrect then correct",
             "word": "mango",
             "inputs": ["apple", "mango"],
             "expected_return": (2, True),
         },
         {
-            "name": "all six guesses used",
             "word": "peach",
             "inputs": ["apple", "apple", "apple", "apple", "apple", "apple"],
             "expected_return": (6, False),
@@ -29,19 +60,18 @@ def test_play_round():
     ]
 
     original_stdout = sys.stdout
+    score = 0
+    total = len(test_cases) * 2
 
-    for i, case in enumerate(test_cases, start=1):
-        print(f"Test: {case['name']}")
+    for case in test_cases:
         print(f"Word: {case['word']}")
         print(f"Inputs: {case['inputs']}")
 
         inputs_iter = iter(case["inputs"])
-
         def mock_get_player_guess():
             return next(inputs_iter)
 
         sys.stdout = io.StringIO()
-
         try:
             globals()["get_player_guess"] = mock_get_player_guess
             result = play_round(case["word"])
@@ -56,16 +86,28 @@ def test_play_round():
             sys.stdout = original_stdout
 
         print(f"Returned: {result}")
-
         if result == case["expected_return"]:
-            print(f"✔ Test {i}: Return value correct")
+            print("✔ Return value correct")
             score += 1
         else:
-            print(f"❌ Test {i}: Return value incorrect (expected {case['expected_return']})")
+            print(f"❌ Return value incorrect (expected {case['expected_return']})")
+
+        expected_output = build_expected_output(case["word"], case["inputs"])
+        collapsed_output = " ".join(output.split())
+        collapsed_expected = " ".join(expected_output.split())
+
+        if collapsed_expected in collapsed_output:
+            print("✔ Printed output correct")
+            score += 1
+        else:
+            print("❌ Printed output incorrect/missing")
 
         print("Printed output:")
         print(output.strip() if output.strip() else "[no printed output]")
+        print("Expected output:")
+        print(expected_output)
         print("-" * 60)
 
+    print(f"\nPassed {score}/{total} tests")
+
 test_play_round()
-print(f"\nPassed {score}/{total} tests")
