@@ -18,6 +18,7 @@ def build_expected_output(word, inputs):
     for guess_num, guess in enumerate(inputs, start=1):
         lines.append(f"Guess {guess_num}:")
         lines.append(compute_display(guess, word))
+        lines.append("") #newline 
     return "\n".join(lines)
 
 def test_play_round():
