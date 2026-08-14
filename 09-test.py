@@ -7,13 +7,12 @@ total = 3
 
 def test_play_game():
     global score
-
     test_cases = [
         {
             "name": "one win then stop",
             "inputs": ["N"],
             "mock_play_more_results": [
-                (((2, True), "apple"))
+                ((2, True), "apple")
             ],
             "expected_contains": [
                 "Success! The word is apple!",
@@ -31,7 +30,7 @@ def test_play_game():
             "name": "one loss then stop",
             "inputs": ["N"],
             "mock_play_more_results": [
-                (((6, False), "grape"))
+                ((6, False), "grape")
             ],
             "expected_contains": [
                 "Better luck next time! The word is grape!",
@@ -49,8 +48,8 @@ def test_play_game():
             "name": "invalid input then continue then stop",
             "inputs": ["X", "Y", "N"],
             "mock_play_more_results": [
-                (((1, True), "melon")),
-                (((3, True), "peach"))
+                ((1, True), "melon"),
+                ((3, True), "peach")
             ],
             "expected_contains": [
                 "Success! The word is melon!",
@@ -82,6 +81,10 @@ def test_play_game():
             return next(inputs_iter)
 
         class MockFile:
+            def __enter__(self):
+                return self
+            def __exit__(self, exc_type, exc_val, exc_tb):
+                pass
             def read(self):
                 return "apple mango peach grape melon"
             def close(self):
@@ -123,7 +126,7 @@ def test_play_game():
             print(f"❌ Test {i}: Output did not match expected content")
 
         print("Printed output:")
-        print(output.strip())
+        print(output.strip() if output.strip() else "[no printed output]")
         print("-" * 60)
 
 test_play_game()
