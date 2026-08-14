@@ -2,11 +2,10 @@ import io
 import sys
 
 score = 0
-total = 4
+total = 8
 
 def test_play_more():
     global score
-
     test_cases = [
         {
             "name": "round 1",
@@ -16,9 +15,7 @@ def test_play_more():
             "mock_word": "grape",
             "mock_game": (3, True),
             "expected_return": ((3, True), "grape"),
-            "expected_output": """Round: 1
-
-"""
+            "expected_output": """Round: 1\n\n"""
         },
         {
             "name": "round 2",
@@ -28,36 +25,32 @@ def test_play_more():
             "mock_word": "melon",
             "mock_game": (6, False),
             "expected_return": ((6, False), "melon"),
-            "expected_output": """Round: 2
-
-"""
+            "expected_output": """Round: 2\n\n"""
         }
     ]
-
     original_stdout = sys.stdout
-
     for case in test_cases:
         print(f"Test: {case['name']}")
-
+        arg_errors = []
         sys.stdout = io.StringIO()
-
         try:
             def mock_list_of_words(read):
+                if read != case["read"]:
+                    arg_errors.append(f"list_of_words: expected arg '{case['read']}', got '{read}'")
                 return case["mock_words_list"]
-
             def mock_get_random_word(words_list):
+                if words_list != case["mock_words_list"]:
+                    arg_errors.append(f"get_random_word: expected arg {case['mock_words_list']}, got {words_list}")
                 return case["mock_word"]
-
             def mock_play_round(word):
+                if word != case["mock_word"]:
+                    arg_errors.append(f"play_round: expected arg '{case['mock_word']}', got '{word}'")
                 return case["mock_game"]
-
             globals()["list_of_words"] = mock_list_of_words
             globals()["get_random_word"] = mock_get_random_word
             globals()["play_round"] = mock_play_round
-
             result = play_more(case["read"], case["rounds"])
             output = sys.stdout.getvalue()
-
         except NameError as e:
             result = f"ERROR: NameError - {e}"
             output = ""
@@ -67,22 +60,30 @@ def test_play_more():
         finally:
             sys.stdout = original_stdout
 
+        # Check 1: return
         print(f"Returned: {result}")
-
         if result == case["expected_return"]:
             print("✔ Return value correct")
             score += 1
         else:
             print(f"❌ Return value incorrect (expected {case['expected_return']})")
 
+        # Check 2: output
         print("Printed output:")
         print(output if output.strip() else "[no printed output]")
-
         if output == case["expected_output"]:
             print("✔ Printed output correct")
             score += 1
         else:
-            print("❌ Printed output incorrect")
+            print(f"❌ Printed output incorrect (expected {repr(case['expected_output'])})")
+
+        # Check 3: arguments
+        if arg_errors:
+            for err in arg_errors:
+                print(f"❌ Incorrect argument: {err}")
+        else:
+            print("✔ All functions called with correct arguments")
+            score += 1
 
         print("-" * 60)
 
