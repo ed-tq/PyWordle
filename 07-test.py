@@ -2,26 +2,6 @@ import builtins
 import io
 import sys
 
-def play_round(word):
-    guesses = 1
-    while guesses <= 6:
-        guess = get_player_guess()
-        display = ""
-        for i in range(len(word)):
-            if guess[i] == word[i]:
-                display += guess[i].upper() + ' '
-            elif guess[i] in word:
-                display += guess[i].lower() + ' '
-            else:
-                display += "_ "
-        print(display)
-        print()
-        if guess.lower() == word.lower():
-            return (guesses, True)
-        if guesses == 6:
-            return (guesses, False)
-        guesses += 1
-
 def compute_display(guess, word):
     display = ""
     for i in range(len(word)):
