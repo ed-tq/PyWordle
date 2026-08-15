@@ -15,7 +15,7 @@ def test_play_more():
             "mock_word": "grape",
             "mock_game": (3, True),
             "expected_return": ((3, True), "grape"),
-            "expected_output": """Round: 1\n"""
+            "expected_output": ""Round: 1\n""
         },
         {
             "name": "round 2",
@@ -25,7 +25,7 @@ def test_play_more():
             "mock_word": "melon",
             "mock_game": (6, False),
             "expected_return": ((6, False), "melon"),
-            "expected_output": """Round: 2\n"""
+            "expected_output": ""Round: 2\n""
         }
     ]
     original_stdout = sys.stdout
