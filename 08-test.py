@@ -2,7 +2,7 @@ import io
 import sys
 
 score = 0
-total = 8
+total = 6
 
 def test_play_more():
     global score
